@@ -1,0 +1,85 @@
+.ContactSection{
+     background-color: #f6f6f6;
+     padding: 50px 90px;
+}
+.ContactForm{
+padding: 15px 0px;
+}
+.ContactFormlabel{
+    font-size: 25px;
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+.contactInput{
+    padding: 8px;
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.ContactButton{
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+    margin: 20px 0px;
+    border-radius: 6px;
+    border: none;
+    background: #363636;
+    color: #fff;
+}
+.contactWrapDisplay{
+    display: flex;
+    gap: 25px;
+   padding: 20px 0px 12px 70px;
+}
+.DreamParagraph{
+    font-size:18px;
+    padding-bottom: 10px;
+}
+.ContactBtn{
+    color: #fff;
+    background-color: #363636;
+    width: 25%;
+    padding: 12px 0px;
+}
+.ContactBtn:hover{
+    color:#fff;
+    background-color:#000;
+    width: 25%;
+    padding: 12px 0px;
+}
+/* **************NEW********************** */
+.ContactUsLooking {
+    position: relative; /* Needed for overlay positioning */
+    background-image: url(https://www.fotozoneindia.com/wp-content/uploads/2025/02/09-scaled.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        padding: 100px 0px 92px 0px;
+        margin-top: 60px;
+}
+
+.ContactOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F0E7D5;
+    opacity: 0.93;
+    z-index: 1;
+}
+
+.ContactWork {
+    position: relative; /* To stay above overlay */
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    color: #000; /* black text */
+    padding: 50px 0;
+}
+
+/* .ContactWork .contactBlock {
+    margin-bottom: 20px;
+} */

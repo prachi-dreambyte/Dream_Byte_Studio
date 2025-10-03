@@ -1,0 +1,99 @@
+.media-container {
+  display: flex;
+  gap: 20px;       /* space between image & video */
+  margin-top: 20px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+.media-item {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-height: 540px;
+    object-fit: cover;
+}
+.ServicePadding {
+    padding: 0px 150px 20px 150px;
+}
+.ServiceSpan{
+    color:black;
+}
+.ServiceWrapper{
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 50px;
+}
+.ServiceWrapper h6{
+font-size: 20px;
+    font-weight: 500;
+    color: #363636;
+}
+.ServiceWrapper p{
+font-size: 18px;
+    font-weight: 450;
+    letter-spacing: 0px;
+}
+.services-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      max-width: 320px;
+      margin: auto;
+    }
+
+    .services-card h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .service-item i {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    /* Active Item */
+    .service-item.active {
+      background: #363636;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .service-item.active i {
+      color: #fff;
+    }
+
+    /* Inactive */
+    .service-item.inactive {
+      color: #aaa;
+      border-bottom: 1px solid #eee;
+    }
+
+    .service-item.inactive i {
+      color: #ccc;
+    }
+
+    /* Hover effect */
+    .service-item.inactive:hover {
+      background: #f8f9fa;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      .services-card {
+        padding: 15px;
+        max-width: 100%;
+      }
+    }

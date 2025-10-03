@@ -1,0 +1,131 @@
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: cardEntry 0.8s ease forwards;
+  animation-delay: var(--delay);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Page load animation */
+@keyframes cardEntry {
+  0% {
+    transform: scale(0.8) translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Image initially hidden */
+.service-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  z-index: 1;
+}
+
+/* Default content (always visible) */
+.service-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 25px;
+    text-align: center;
+    color: black;
+    height: 480px;
+    width: 100%;
+}
+
+.service-content .service-icon {
+  font-size: 45px;
+  color: #d7d7d787;
+  margin-bottom: 12px;
+  transition: all 0.4s ease;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.4s 
+ease;
+    letter-spacing: 2px;
+}
+.service-content p {
+  font-size: 15px;
+  transition: color 0.4s ease;
+  letter-spacing: 1px;
+}
+
+/* Left bottom icon */
+.service-bottom-icon {
+    position: absolute;
+    bottom: -29px;
+    left: -1px;
+    font-size: 110px;
+    z-index: 2;
+    transition: opacity 0.4s 
+ease;
+    color: #d7d7d787;
+}
+/* Hover Effects */
+.service-card:hover .service-img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-content h3,
+.service-card:hover .service-content p,
+.service-card:hover .service-icon {
+  color: #fff;
+}
+
+.service-card:hover .service-bottom-icon {
+  opacity: 0;
+}
+/* Right-bottom button */
+.service-right-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    width: 10%;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffc107;
+    color: #fff;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s 
+ease;
+    z-index: 3;
+    text-decoration: none;
+}
+
+.service-card:hover .service-right-btn {
+  background: #fff;
+  color: #000;
+  transform: scale(1.1) rotate(360deg);
+}
+
+.service-right-btn .arrow {
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-right-btn .arrow {
+  transform: translateX(3px);
+}

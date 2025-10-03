@@ -1,0 +1,124 @@
+footer {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* subtle gradient */
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+footer .logo {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+footer .logo:hover {
+  transform: scale(1.05);
+}
+
+.footerName {
+ font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 17px;
+    color: black;
+    position: relative;
+    padding-top: 14px;
+
+}
+
+.footerName::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000; /* Black underline */
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.footerPara {
+  font-size: 18px;
+    line-height: 1.6;
+    color: #363636;
+    font-weight: 200;
+}
+
+.footerParagraph a {
+ text-decoration: none;
+    color: #555;
+    transition: color 0.3s 
+ease, padding-left 0.3s 
+ease;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #363636;
+    font-weight: 200;
+    padding-bottom: 7px;
+}
+
+.footerParagraph a:hover {
+  color: #000; /* Black hover */
+  padding-left: 5px;
+}
+
+form input.form-control {
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+form input.form-control:focus {
+  border-color: #000; /* Black focus */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+form button {
+  border-radius: 25px;
+  padding: 8px 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  background: #000; 
+  color: #fff;
+}
+
+form button:hover {
+  background: #333; /* Darker black */
+  transform: scale(1.05);
+}
+
+/* Divider line */
+footer hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Bottom links */
+footer .text-muted a {
+  color: #666;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+footer .text-muted a:hover {
+  color: #000; /* Black hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input.form-control {
+    max-width: 100%;
+  }
+}
+.FooterGap{
+        padding: 0px 40px;
+}

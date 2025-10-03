@@ -1,0 +1,82 @@
+.ServiceImage {
+    height: 400px;
+    width: 100%;
+}
+.quote-div{
+    padding: 40px 40px;
+    background: #f6f6f6;
+}
+.quote-section{
+    display: flex;
+    align-items: start;
+    padding-left: 30px;
+}
+.quote-icon span {
+    font-size: 80px;
+    line-height: 1;
+    font-weight: bold;
+}
+.quote-text {
+    font-size: 18px;
+    line-height: 35px;
+    color: #363636;
+    font-style: italic;
+    font-weight: 500;
+    padding: 20px 13px;
+    letter-spacing: 2px;
+}
+.ServiceImg{
+    width: 50%;
+}
+.ServiceBtn{
+  border: 1px solid;
+    padding: 10px 15px;
+    font-size: 18px;
+    background: black;
+    color: #fff;
+    border-radius: 8px;
+    margin: 15px 315px;
+}
+.ServiceBtn a{
+  text-decoration: none;
+  color: #fff;
+}
+.SectionFrontSecondSection p{
+  line-height: 35px;
+    /* text-align: justify; */
+    font-size: 18px;
+    /* text-align: center; */
+    line-height: 35px;
+    color: #363636;
+    font-style: italic;
+    font-weight: 400;
+    padding: 20px 0px;
+    letter-spacing: 1px;
+}
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* adjust based on header height */
+  z-index: 10;
+  padding: 35px 0px;
+}
+@media (min-width: 768px) {
+  .sticky-sidebar {
+    position: sticky;
+    top: 100px; /* adjust based on your header height */
+    z-index: 10;
+  }
+}
+.ServiceA{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+.SectionRecent{
+    font-size: 25px;
+}
+.ServiceImages {
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
