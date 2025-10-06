@@ -271,7 +271,7 @@ cubic-bezier(.25, .8, .25, 1);
   transform: translateY(0);
 }
 .homeparallaxwrapImg {
-  background-image: url('E:\dream byte studio\Frontend\public\image\demo\image1.jpg');
+  background-image: url('/public/image/demo/image1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;        /* fills without stretching */
