@@ -6,6 +6,8 @@ import AllBlogs from "../pages/Admin/Blogs/index.jsx";
 import Layout from "../components/layouts/layout.jsx";
 import { lazy } from "react";
 import React from "react";
+import AddBlog from "../pages/Admin/Blogs/AddBlog.jsx";
+import EditBlog from "../pages/Admin/Blogs/EditBlog.jsx";
 
 const Home = lazy(() => import("../pages/Homepage/Home.jsx"));
 const Page = lazy(() => import("../pages/contactUs/Page.jsx"));
@@ -42,6 +44,8 @@ export const routes = [
         children: [
           { index: true, element: <Dashboard /> },
           { path: "blogs", element: <AllBlogs /> },
+          { path: "blogs/add", element: <AddBlog /> },
+          { path: "blogs/edit/:slug", element: <EditBlog /> },
         ],
       },
     ],
