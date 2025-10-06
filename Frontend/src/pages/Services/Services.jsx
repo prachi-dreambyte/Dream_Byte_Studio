@@ -4,6 +4,7 @@ import "../../style/home.css";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import { FaCamera, FaVideo, FaPhotoVideo, FaGreaterThan } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Services() {
   const services = [
     {
@@ -46,7 +47,7 @@ function Services() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section className="portfolio-page"></section>
 
       <section className="FrontSecondSection services-sections" >
@@ -77,9 +78,9 @@ function Services() {
       <p>{service.desc}</p>
     </div>
     <div className="service-bottom-icon">{service.icon}</div>
-   <a href="/serviceDetail" className="service-right-btn">
+   <Link to="/services/films-showcasing" className="service-right-btn">
   <FaGreaterThan className="arrow" />
-</a>
+</Link>
   </div>
 </div>
 
@@ -88,7 +89,7 @@ function Services() {
             </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

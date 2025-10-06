@@ -1,21 +1,23 @@
-// backend/server.js
-const express = require("express");
+require('dotenv').config();
+
+const express = require('express');
+var compression = require('compression')
+const cors = require('cors');
 const app = express();
 
-app.use(express.json()); // for JSON request body
+require('./config/connection.js');
 
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
+const port = process.env.PORT || 8080;
+const routes = require('./routes/routes.js');
+
+app.use(cors({origin:true}));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(compression());
+app.use('/public', express.static('public', { maxAge: 31536000 }));
+
+app.use('/api',routes);
+
+app.listen(port , ()=>{
+    console.log('Server running on port ' + port);
 });
-
-// Example API
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
-});
-
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-const cors = require("cors");
-app.use(cors());
-

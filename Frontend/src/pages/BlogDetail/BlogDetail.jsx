@@ -7,7 +7,7 @@ import '../../style/BlogDetail.css';
 function BlogDetail() {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
      <section className="portfolio-page">
 
     </section>
@@ -79,7 +79,7 @@ function BlogDetail() {
         </div>
       </div>
     </section>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

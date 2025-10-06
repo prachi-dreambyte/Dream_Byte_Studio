@@ -8,7 +8,7 @@ import '../../style/ServiceDetails.css';
 const ServiceDetail = () => {
   return (
   <>
-    <Header/>
+    {/* <Header/> */}
      <section className="portfolio-page">
 
     </section>
@@ -283,7 +283,7 @@ const ServiceDetail = () => {
         </div>
       </div>
     </section>
-    <Footer/>
+    {/* <Footer/> */}
     
     </>
   )

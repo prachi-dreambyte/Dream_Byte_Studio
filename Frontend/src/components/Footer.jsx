@@ -1,11 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../style/home.css";
-import "../style/footer.css"
+import "../style/footer.css";
 
 const Footer = () => {
   return (
-    <>
-    
     <footer className="bg-light pt-4 border-top">
       <div className="container">
         <div className="row align-items-center">
@@ -29,61 +28,49 @@ const Footer = () => {
           {/* Links */}
           <div className="col-md-3 mb-3 mb-md-0">
             <div className="FooterGap">
-             <h3 className="footerName">Home</h3>
-            <ul className="list-unstyled">
-              
-              <li className="nav-item footerParagraph">
-                <a href="#" className="">
-                  About
-                </a>
-              </li>
-              <li className="nav-item footerParagraph">
-                <a href="#" className=" ">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item footerParagraph">
-                <a href="#" className="">
-                 Portfolio
-                </a>
-              </li>
-              <li className="nav-item footerParagraph" >
-                <a href="#" className="">
-                 Blogs
-                </a>
-              </li>
-            </ul>
+              <h3 className="footerName">Home</h3>
+              <ul className="list-unstyled">
+                <li className="nav-item footerParagraph">
+                  <Link to="/#aboutus">About</Link>
+                </li>
+                <li className="nav-item footerParagraph">
+                  <Link to="/services">Services</Link>
+                </li>
+                <li className="nav-item footerParagraph">
+                  <Link to="/portfolio">Portfolio</Link>
+                </li>
+                <li className="nav-item footerParagraph">
+                  <Link to="/blogs">Blogs</Link>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-md-3 mb-3 mb-md-0">
-             <div className="FooterGap">
-             <h3 className="footerName">Contact</h3>
-            <ul className="list-unstyled">
-              
-              <li className="nav-item footerParagraph">
-                <a href="#" className=" ">
-                 +91 8279720490
-                </a>
-              </li>
-              <li className="nav-item footerParagraph">
-                <a href="#" className="">
-                 +91 9258332639
-                </a>
-              </li>
-              <li className="nav-item footerParagraph">
-                <a href="#" className="">
-                info@dreambytesolution.com
-                </a>
-              </li>
-            </ul>
+            <div className="FooterGap">
+              <h3 className="footerName">Contact</h3>
+              <ul className="list-unstyled">
+                <li className="nav-item footerParagraph">
+                  <a href="tel:+918279720490">+91 8279720490</a>
+                </li>
+                <li className="nav-item footerParagraph">
+                  <a href="tel:+919258332639">+91 9258332639</a>
+                </li>
+                <li className="nav-item footerParagraph">
+                  <a href="mailto:info@dreambytesolution.com">
+                    info@dreambytesolution.com
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
           {/* Newsletter */}
           <div className="col-md-3">
-            <h3 className="footerName">
-              Connect With Us</h3>
-            <form className="d-flex justify-content-center justify-content-md-end">
+            <h3 className="footerName">Connect With Us</h3>
+            <form
+              className="d-flex justify-content-center justify-content-md-end"
+              onSubmit={(e) => e.preventDefault()} // ✅ prevent page reload
+            >
               <input
                 type="email"
                 className="form-control me-2"
@@ -102,30 +89,28 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
           <div className="mb-2 mb-md-0 text-center text-md-start">
-            <a href="#" className="text-muted small px-2">
+            <Link to="/terms" className="text-muted small px-2">
               Terms & Conditions
-            </a>
+            </Link>
             |
-            <a href="#" className="text-muted small px-2">
+            <Link to="/privacy-policy" className="text-muted small px-2">
               Privacy Policy
-            </a>
+            </Link>
             |
-            <a href="#" className="text-muted small px-2">
+            <Link to="/accessibility" className="text-muted small px-2">
               Accessibility
-            </a>
+            </Link>
             |
-            <a href="#" className="text-muted small px-2">
+            <Link to="/legal" className="text-muted small px-2">
               Legal
-            </a>
+            </Link>
           </div>
           <div className="text-muted small text-center text-md-end">
-            Design with * by <b>Dream Byte Studio</b> © 2025. All rights reserved.
+            Design with * by <b>Dream Byte Studio</b> © {new Date().getFullYear()}. All rights reserved.
           </div>
         </div>
       </div>
     </footer>
-    </>
-   
   );
 };
 

@@ -90,7 +90,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section className="portfolio-page"></section>
       <div className="container-fluid portfolio-pages">
         <div className="row">
@@ -143,7 +143,7 @@ const Portfolio = () => {
           </div>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
