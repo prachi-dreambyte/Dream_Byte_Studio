@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import Header from '../../components/header'
 import '../../style/home.css';
 import "slick-carousel/slick/slick.css";
@@ -8,8 +8,24 @@ import Footer from '../../components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import { FaCamera, FaVideo, FaPhotoVideo } from "react-icons/fa";
+import { Link, useLocation } from 'react-router-dom';
 
 function Home() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // optional: scroll to top if no hash
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [pathname, hash]);
+
+
   const img1 = useMemo(() => [
     '/image/demo/image1.jpg','/image/demo/image2.jpg','/image/demo/image3.jpg','/image/demo/image4.jpg','/image/demo/image5.jpg','/image/demo/image1.jpg',
     '/image/demo/image4.jpg','/image/demo/image2.jpg','/image/demo/image5.jpg','/image/demo/image3.jpg','/image/demo/img1.jpg','/image/demo/img2.jpg'
@@ -130,7 +146,7 @@ cssEase: "linear", // wait before next slide
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
           <div className="carousel-inner">
@@ -209,7 +225,7 @@ cssEase: "linear", // wait before next slide
 
       
       <button className="DreamBtn mt-5">
-        <a href="/Services">More Services</a>
+        <Link to="/services">More Services</Link>
       </button>
     </div>
           
@@ -491,7 +507,7 @@ cssEase: "linear", // wait before next slide
             </section>
         
 
-          <Footer/>
+          {/* <Footer/> */}
         </>
   )
 }

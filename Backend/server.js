@@ -1,21 +1,27 @@
-// backend/server.js
+require("dotenv").config();
 const express = require("express");
-const app = express();
-
-app.use(express.json()); // for JSON request body
-
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
-});
-
-// Example API
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
-});
-
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
+const compression = require("compression");
 const cors = require("cors");
-app.use(cors());
+const cookieParser = require("cookie-parser");
+const routes = require("./routes/routes.js");
+require("./config/connection.js");
 
+const app = express();
+const port = process.env.PORT || 8080;
+
+app.use(cors({
+  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(compression());
+
+app.use("/public", express.static("public", { maxAge: 31536000 }));
+app.use("/api", routes);
+
+app.listen(port, () => console.log(`Server running on port ${port}`));
