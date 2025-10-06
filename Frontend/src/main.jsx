@@ -7,12 +7,20 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { routes } from './routes/index.jsx';
 import Loader from './components/loader.jsx';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const router = createBrowserRouter(routes);
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Suspense fallback={<Loader/>}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <Provider store={store}>
+      <Suspense fallback={<Loader/>}>
+          <RouterProvider router={router} />
+          <ToastContainer />
+      </Suspense>
+    </Provider>
   </StrictMode>
 );
