@@ -4,6 +4,7 @@ import "../../style/blogs.css";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import '../../style/home.css';
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -39,7 +40,7 @@ const Blog = () => {
 
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
    <section className="portfolio-page"></section>
     <section className="ContactSection">
          <div className="container">
@@ -49,17 +50,17 @@ const Blog = () => {
           <div key={blog.id} className="col-lg-3 col-md-6 col-sm-12">
             <div className="blog-card">
               <div className="blog-img-wrapper">
-                 <a href="/BlogDetail" className="read-more">
+                 <Link to="/blogs/future-of-ai" className="read-more">
                 <img src={blog.image} alt={blog.title} className="blog-img" />
-                </a>
+                </Link>
                 <span className="blog-date">{currentTime}</span>
               </div>
               <div className="blog-overlay">
-                 <a href="/BlogDetail" className="read-more">
+                 <Link to="/blogs/future-of-ai" className="read-more">
                 <h5 className="blog-title">{blog.title}</h5>
                
                   READ MORE
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -67,7 +68,7 @@ const Blog = () => {
       </div>
     </div>
     </section>
-   <Footer/>
+   {/* <Footer/> */}
     </>
   );
 };

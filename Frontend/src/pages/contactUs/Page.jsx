@@ -19,7 +19,7 @@ function ContactUs() {
   };
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
     <section className="portfolio-page">
 
     </section>
@@ -171,7 +171,7 @@ function ContactUs() {
           </div>
       </div>
     </section>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }
