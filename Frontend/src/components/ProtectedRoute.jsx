@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 import { fetchUser } from "../redux/slices/authSlice.js";
+import Loader from "./loader.jsx";
 
 export default function ProtectedRoute() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export default function ProtectedRoute() {
 
   // Still checking auth
   if (status === "loading") {
-    return <div className="text-center mt-5">Loading...</div>;
+    return <Loader/>;
   }
 
   // Not authenticated → redirect to login
