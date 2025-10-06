@@ -64,41 +64,36 @@ exports.requestSignin = async (req, res) => {
   }
 };
 
+// Get logged-in user
 exports.getLoggedInUser = async (req, res) => {
   try {
-    const token = req.cookies.token;
-    if (!token) {
+    // req.user is attached by authMiddleware
+    if (!req.user) {
       return res.status(401).json({ error: true, message: "Not authenticated" });
-    }
-
-    // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_KEY);
-
-    // Fetch user
-    const user = await User.findById(decoded.user_id).select("-password");
-    if (!user) {
-      return res.status(404).json({ error: true, message: "User not found" });
     }
 
     return res.status(200).json({
       error: false,
-      user,
+      user: req.user, // already fetched from DB in middleware
     });
   } catch (error) {
-    return res.status(401).json({
+    return res.status(500).json({
       error: true,
-      message: "Invalid or expired token",
+      message: error.message || "Something went wrong.",
     });
   }
 };
 
+// Logout user
 exports.logoutUser = async (req, res) => {
   try {
+    // Clear HTTP-only cookie
     res.clearCookie("token", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
     });
+
     return res.status(200).json({
       error: false,
       message: "Logged out successfully.",

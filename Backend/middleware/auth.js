@@ -1,30 +1,30 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/users');
+const jwt = require("jsonwebtoken");
+const User = require("../models/users");
 
 const authMiddleware = async (req, res, next) => {
   try {
-    const authHeader = req.headers.authorization;
-
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({ error: true, message: 'Authorization token missing' });
+    // ✅ Read token from HTTP-only cookie
+    const token = req.cookies.token;
+    if (!token) {
+      return res.status(401).json({ error: true, message: "Not authenticated" });
     }
 
-    const token = authHeader.split(' ')[1];
-
+    // Verify token
     const decoded = jwt.verify(token, process.env.JWT_KEY);
     if (!decoded || !decoded.user_id) {
-      return res.status(401).json({ error: true, message: 'Invalid token' });
+      return res.status(401).json({ error: true, message: "Invalid token" });
     }
 
-    const user = await User.findById(decoded.user_id);
+    // Fetch user from DB
+    const user = await User.findById(decoded.user_id).select("-password");
     if (!user) {
-      return res.status(404).json({ error: true, message: 'User not found' });
+      return res.status(404).json({ error: true, message: "User not found" });
     }
 
     req.user = user; // attach user to request
-    next();
+    next(); // proceed to the API route
   } catch (error) {
-    return res.status(401).json({ error: true, message: 'Unauthorized' });
+    return res.status(401).json({ error: true, message: "Unauthorized" });
   }
 };
 

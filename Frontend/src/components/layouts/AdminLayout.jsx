@@ -17,11 +17,6 @@ const AdminLayout = () => {
     rootElement.classList.toggle("toggle-sidebar");
   };
 
-  const toggleSearchBar = () => {
-    const rootElement = document.getElementById("searchBar");
-    rootElement.classList.toggle("search-bar-show");
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -38,18 +33,10 @@ const AdminLayout = () => {
       {/* ======= Header ======= */}
       <header id="header" className="header fixed-top d-flex align-items-center">
         <div className="d-flex align-items-center justify-content-between">
-          <Link to="/" className="logo d-flex align-items-center">
+          <Link to="/" className="logo d-flex align-items-center w-auto">
             <img src="/image/logo/Dbs.png" alt="" />
           </Link>
           <i className="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
-        </div>
-
-        {/* Search Bar */}
-        <div className="search-bar" id="searchBar">
-          <form className="search-form d-flex align-items-center" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
-            <button type="submit" title="Search"><i className="bi bi-search"></i></button>
-          </form>
         </div>
 
         {/* Nav Icons */}
@@ -59,21 +46,15 @@ const AdminLayout = () => {
               <div className="nav-link nav-profile d-flex align-items-center pe-0" data-bs-toggle="dropdown">
                 <img src="/assets/img/user.png" alt="Profile" className="rounded-circle" />
                 <span className="d-none d-md-block dropdown-toggle ps-2">
-                  {user?.fullname || "User"}
+                  {user?.fullName || "User"}
                 </span>
               </div>
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li className="dropdown-header">
-                  <h6>{user?.fullname || "User"}</h6>
+                  <h6>{user?.fullName || "User"}</h6>
                   <span className="text-muted small">{user?.email || ""}</span>
                 </li>
                 <li><hr className="dropdown-divider" /></li>
-                <li>
-                  <Link className="dropdown-item d-flex align-items-center" to="/">
-                    <i className="bi bi-person"></i>
-                    <span>My Profile</span>
-                  </Link>
-                </li>
                 <li><hr className="dropdown-divider" /></li>
                 <li>
                   <button

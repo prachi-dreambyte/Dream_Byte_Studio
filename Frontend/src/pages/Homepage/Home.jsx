@@ -51,13 +51,13 @@ cssEase: "linear", // wait before next slide
   ]
 };
   const images = [
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
-    "/image/MAN13348-2-1920x1080.jpg",
+    "/image/demo/F&B (1).webp",
+    "/image/demo/REAL ESTATE (3).webp",
+    "/image/demo/F&B (1).webp",
+    "/image/demo/BTS.webp",
+    "/image/demo/WEDDING (2).webp",
+    "/image/Graha aroma.webp",
+    "/image/demo/F&B (4).webp",
   ];
 
   const settings = {
@@ -88,54 +88,56 @@ cssEase: "linear", // wait before next slide
   const services = [
   {
     icon: <FaCamera size={40} />,
-    title: "Videography",
-    desc1: "Best Videography services | Dream Byte Studio | Dehradun.",
-    desc2: "We focus on creating timeless memories and producing a film that sticks in the mind with its visuals and compelling stories.",
-     img: "/image/demo/image1.jpg"
-  },
-  {
-    icon: <FaCamera size={40} />,
-    title: "Photography",
-    desc1: "Best photographer in India | Dream Byte Studio | Dehradun",
-    desc2: "Our expert team of photographers combine creativity and technology to capture the story and memories behind every photo.",
-     img: "/image/demo/image2.jpg"
-  },
-  {
-    icon: <FaCamera size={40} />,
-    title: "Model portfolio Shoot",
-    desc1: "Model portfolio shoot services | Dream Byte Studio | Dehradun",
-    desc2: "Boost your modeling career with Dream Byte Studio for industry-standard photos and videos for your portfolio.",
-    img: "/image/demo/image4.jpg"
-  },
-  {
-    icon: <FaCamera size={40} />,
     title: "Product Shoot",
-    desc1: " Best product shoot services | Dream Byte Studio | Dehradun.",
-    desc2: "We help you to tell your brand story and brand vision with a stunning product shoot by capturing every detail of your product.",
-    img: "/image/demo/image5.jpg"
+    desc1: "",
+    desc2: "We focus on creating timeless memories and producing a film that sticks in the mind with its visuals and compelling stories.",
+     img: "/image/Graha aroma.webp"
+  },
+  {
+    icon: <FaCamera size={40} />,
+    title: "Content Creation",
+    desc1: "",
+    desc2: "Our expert team of photographers combine creativity and technology to capture the story and memories behind every photo.",
+     img: "/image/demo/BTS.webp"
   },
   {
     icon: <FaCamera size={40} />,
     title: "Event shoot",
-    desc1: "Best event shoot servies | Dream Byte Studio| Dehradun.",
-    desc2: "Capture energy of every occasion with vibrant event photography and vediography so your special moment never fades away.",
-    img: "/image/demo/image1.jpg"
+    desc1: "",
+    desc2: "Boost your modeling career with Dream Byte Studio for industry-standard photos and videos for your portfolio.",
+    img: "/image/demo/EVENT (3).webp"
   },
   {
     icon: <FaCamera size={40} />,
-    title: "Commercial shoots",
-    desc1: "Best commercial shoot services | Dream Byte Studio| Dehradun ",
+    title: "E-commerce photography",
+    desc1: " ",
+    desc2: "We help you to tell your brand story and brand vision with a stunning product shoot by capturing every detail of your product.",
+    img: "/image/demo/ECOM (1).webp"
+  },
+  {
+    icon: <FaCamera size={40} />,
+    title: "Fashion and Model Shoot",
+    desc1: "",
+    desc2: "Capture energy of every occasion with vibrant event photography and vediography so your special moment never fades away.",
+    img: "/image/demo/FASHION.webp"
+  },
+  {
+    icon: <FaCamera size={40} />,
+    title: "Ad Films and Commercial shoots",
+    desc1: "",
     desc2: "Advertise or promote your products, brands, and services with amazing visual content to showcase your firm’s story.",
-    img: "/image/demo/image2.jpg"
+    img: "/image/demo/BTS (2).webp"
   },
   // {
   //   icon: <FaCamera size={40} />,
   //   title: "Documentary",
   //   desc1: " Best Documentary production services | Dream Byte Studio | Dehradun ",
   //   desc2: "Unveil real stories with impactful documentaries by combining stunning visuals, storytelling, and professional cinematography to bring real-life experience.",
-  //   img: "\/image/MAN13348-2-1920x1080.jpg"
+  //   img: "//image/MAN13348-2-1920x1080.jpg"
   // },
-  // {
+  // { 
+
+
   //   icon: <FaCamera size={40} />,
   //   title: "Wedding videography and photography",
   //   desc1: "best wedding photographer in india | Dream Byte Studio | Dehradun",
@@ -342,7 +344,7 @@ cssEase: "linear", // wait before next slide
                 <div className="slider-container">
                   <div className="container-fluid">
                     <Slider {...Set} className="slick-strip">
-                      {img1.map((src, idx) => (
+                      {images.map((src, idx) => (
                       <div key={`${src}-${idx}`} className="slick-card">
                         <img src={src} alt={`Slide ${idx + 1}`} />
                       </div>
