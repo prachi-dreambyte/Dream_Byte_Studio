@@ -112,7 +112,10 @@
     width: 90% !important; */
 }
 .DreamCards p{
-  font-size:18px;
+  font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1px
 }
 .DreamPad{
 padding: 10px 100px;

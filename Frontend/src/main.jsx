@@ -12,6 +12,7 @@ import Blogs from './pages/Blogs/Blogs.jsx';
 import Services from './pages/Services/Services.jsx';
 import BlogDetail from './pages/BlogDetail/BlogDetail.jsx';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.jsx';
+import ServiceArea from './pages/ServicesAera/ServiceArea.jsx'
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
    path:'/ServiceDetail',
     element:<ServiceDetail/>
+  },
+  {
+   path:'/servicearea',
+    element:<ServiceArea/>
   },
 ])
 
