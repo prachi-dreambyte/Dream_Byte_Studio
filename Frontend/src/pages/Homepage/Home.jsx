@@ -51,12 +51,12 @@ cssEase: "linear", // wait before next slide
   ]
 };
   const images = [
-    "/image/demo/F&B (1).webp",
+    "/image/Img.jpg",
     "/image/demo/REAL ESTATE (3).webp",
     "/image/demo/F&B (1).webp",
-    "/image/demo/BTS.webp",
-    "/image/demo/WEDDING (2).webp",
-    "/image/Graha aroma.webp",
+    "/image/Apple.jpg",
+    "/image/400x500.png",
+    "/image/Models/400600.jpg",
     "/image/demo/F&B (4).webp",
   ];
 
@@ -91,14 +91,14 @@ cssEase: "linear", // wait before next slide
     title: "Product Shoot",
     desc1: "",
     desc2: "We focus on creating timeless memories and producing a film that sticks in the mind with its visuals and compelling stories.",
-     img: "/image/Graha aroma.webp"
+     img: "/image/Img.jpg"
   },
   {
     icon: <FaCamera size={40} />,
     title: "Content Creation",
     desc1: "",
     desc2: "Our expert team of photographers combine creativity and technology to capture the story and memories behind every photo.",
-     img: "/image/demo/BTS.webp"
+     img: "/image/Apple.jpg"
   },
   {
     icon: <FaCamera size={40} />,
@@ -119,7 +119,7 @@ cssEase: "linear", // wait before next slide
     title: "Fashion and Model Shoot",
     desc1: "",
     desc2: "Capture energy of every occasion with vibrant event photography and vediography so your special moment never fades away.",
-    img: "/image/demo/FASHION.webp"
+    img: "/image/400x500.png"
   },
   {
     icon: <FaCamera size={40} />,
@@ -142,7 +142,7 @@ cssEase: "linear", // wait before next slide
   //   title: "Wedding videography and photography",
   //   desc1: "best wedding photographer in india | Dream Byte Studio | Dehradun",
   //   desc2: "Cherish your special day with candid shots, cinematic films, and professional editing, and let your moments live forever through our lens.",
-  //   img: "\/image/MAN13348-2-1920x1080.jpg"
+  //   img: "//image/MAN13348-2-1920x1080.jpg"
   // },
 ];
 

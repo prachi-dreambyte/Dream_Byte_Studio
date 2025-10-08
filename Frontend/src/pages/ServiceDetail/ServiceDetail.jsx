@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from '../../components/header'
 import Footer from '../../components/Footer'
 import '../../style/Home.css';
@@ -6,11 +7,31 @@ import '../../style/ServiceDetails.css';
 
 
 const ServiceDetail = () => {
+  const [activeService, setActiveService] = useState("");
+  const navigate = useNavigate();
+
+  const services = [
+    { name: "Video productions", path: "/video-productions" },
+    { name: "Digital media", path: "/digital-media" },
+    { name: "Commercial", path: "/commercial" },
+    { name: "Content creation", path: "/content-creation" },
+    { name: "Creative directions", path: "/creative-directions" },
+    { name: "Studio rental", path: "/studio-rental" },
+  ];
+
+  const handleClick = (service) => {
+    setActiveService(service.name);
+    navigate(service.path); // redirect to page
+  };
   return (
   <>
     {/* <Header/> */}
      <section className="portfolio-page">
-
+<img
+          src="/image/demo/5rivban1.jpg"   // put your image path here
+          alt="Product"
+          className="media-item"
+        />
     </section>
     <section className="ContactSection services-sections">
       <div className="container-fluid">
@@ -22,7 +43,7 @@ const ServiceDetail = () => {
            <div className="media-container">
         {/* Image */}
         <img
-          src="\image\demo\image1.jpg"   // put your image path here
+          src="/image/demo/product (2).webp"   // put your image path here
           alt="Product"
           className="media-item"
         />
@@ -115,7 +136,7 @@ const ServiceDetail = () => {
       </h1>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-10 col-md-8 mx-auto">
+          <div className="col-12 col-md-12 mx-auto">
             <div className="accordion" id="accordionExample">
               {/* Item 1 */}
               <div className="accordion-item accSpace">
@@ -252,34 +273,23 @@ const ServiceDetail = () => {
             
           </div>
           <div className="col-md-3">
-               <div className="sticky-sidebar">
-                  <div className="services-card">
-                    <div className="services-card">
-    <h5>More Services</h5>
-    <div className="service-item active">
-      <i className="bi bi-arrow-right"></i> Video productions
-    </div>
-    <div className="service-item inactive">
-      <i className="bi bi-arrow-right"></i> Digital media
-    </div>
-    <div className="service-item inactive">
-      <i className="bi bi-arrow-right"></i> Commercial
-    </div>
-    <div className="service-item inactive">
-      <i className="bi bi-arrow-right"></i> Content creation
-    </div>
-    <div className="service-item inactive">
-      <i className="bi bi-arrow-right"></i> Creative directions
-    </div>
-    <div className="service-item inactive">
-      <i className="bi bi-arrow-right"></i> Studio rental
-    </div>
-  </div>
-
-              </div>
-          </div>
-
+      <div className="sticky-sidebar">
+        <div className="services-card">
+          <h5>More Services</h5>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`service-item ${
+                activeService === service.name ? "active" : "inactive"
+              }`}
+              onClick={() => handleClick(service)}
+            >
+              <i className="bi bi-arrow-right"></i> {service.name}
+            </div>
+          ))}
         </div>
+      </div>
+    </div>
         </div>
       </div>
     </section>

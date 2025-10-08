@@ -4,43 +4,98 @@ import "../../style/home.css";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import { FaCamera, FaVideo, FaPhotoVideo, FaGreaterThan } from "react-icons/fa";
+import { 
+  Package, 
+  Pencil, 
+  Calendar, 
+  ShoppingCart, 
+  Sparkles, 
+  Film, 
+  Mic, 
+  Clapperboard, 
+  Home, 
+  Heart, 
+  FileVideo 
+} from 'lucide-react';
+
 import { Link } from "react-router-dom";
 function Services() {
   const services = [
     {
-      title: "Photography",
+      title: "Product Shoot",
       desc: "Capturing timeless moments with creative frames.",
-      icon: <FaCamera />,
-      img: "/image/MAN13348-2-1920x1080.jpg",
+      icon: <Package/>,
+      icon1: <FaCamera/>,
+      img: "/image/Img.jpg",
     },
     {
-      title: "Videography",
+      title: "Content Creation",
       desc: "Professional video production with cinematic quality.",
-      icon: <FaVideo />,
-      img: "/image/MAN13348-2-1920x1080.jpg",
+      icon: <Pencil/>,
+       icon1: <FaCamera/>,
+      img: "/image/Apple.jpg",
     },
     {
-      title: "Portfolio Shoot",
+      title: "Event Shoot",
       desc: "Showcasing your best self with creative portfolio shoots.",
-      icon: <FaPhotoVideo />,
-      img: "/image/MAN13348-2-1920x1080.jpg",
+      icon: <Calendar />,
+       icon1: <FaCamera/>,
+      img: "/image/400x500.png",
     },
     {
-      title: "Fashion and Model Shoot",
+      title: "E-Commerce Photography",
       desc: "Capturing timeless moments with creative frames.",
-      icon: <FaCamera />,
+      icon: <ShoppingCart/>,
+       icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
     },
     {
-      title: "Event shoot",
+      title: "Fashion and Model Shoots",
       desc: "Professional video production with cinematic quality.",
-      icon: <FaVideo />,
+      icon: <Sparkles/>,
+       icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
     },
     {
       title: "Ad Films and Commercial shoots",
       desc: "Showcasing your best self with creative portfolio shoots.",
-      icon: <FaPhotoVideo />,
+      icon: <Film/>,
+       icon1: <FaCamera/>,
+      img: "/image/MAN13348-2-1920x1080.jpg",
+    },
+    {
+      title: "Podcast Shoot",
+      desc: "Showcasing your best self with creative portfolio shoots.",
+      icon: <Mic/>,
+       icon1: <FaCamera/>,
+      img: "/image/MAN13348-2-1920x1080.jpg",
+    },
+    {
+      title: "Short Flim Production",
+      desc: "Showcasing your best self with creative portfolio shoots.",
+      icon: <Clapperboard/>,
+       icon1: <FaCamera/>,
+      img: "/image/MAN13348-2-1920x1080.jpg",
+    },
+     {
+      title: "Real estate photography",
+      desc: "Showcasing your best self with creative portfolio shoots.",
+      icon: <Home/>,
+       icon1: <FaCamera/>,
+      img: "/image/MAN13348-2-1920x1080.jpg",
+    },
+     {
+      title: "Wedding, Videography and Photography",
+      desc: "Showcasing your best self with creative portfolio shoots.",
+      icon: <Heart/>,
+       icon1: <FaCamera/>,
+      img: "/image/demo/WEDDING (2).webp",
+    },
+    {
+      title: "Documentary",
+      desc: "Showcasing your best self with creative portfolio shoots.",
+      icon: <FileVideo/>,
+       icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
     },
   ];
@@ -48,7 +103,9 @@ function Services() {
   return (
     <>
       {/* <Header /> */}
-      <section className="portfolio-page"></section>
+      <section className="portfolio-page">
+        <img src="/image/back.jpg" alt="image1"/>
+      </section>
 
       <section className="FrontSecondSection services-sections" >
         <div className="DreamFrontSecondSection SectionFrontSecondSection">
@@ -77,7 +134,7 @@ function Services() {
       <h3>{service.title}</h3>
       <p>{service.desc}</p>
     </div>
-    <div className="service-bottom-icon">{service.icon}</div>
+    <div className="service-bottom-icon">{service.icon1}</div>
    <Link to="/services/films-showcasing" className="service-right-btn">
   <FaGreaterThan className="arrow" />
 </Link>

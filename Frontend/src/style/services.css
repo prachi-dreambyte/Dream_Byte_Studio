@@ -47,29 +47,86 @@
     width: 100%;
 }
 
-.service-content .service-icon {
+.service-content{
   font-size: 45px;
   color: #d7d7d787;
   margin-bottom: 12px;
   transition: all 0.4s ease;
 }
 
+
 .service-content h3 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 500;
     margin: 10px 0;
     transition: color 0.4s 
 ease;
     letter-spacing: 2px;
+    color: black;
 }
 .service-content p {
-  font-size: 15px;
-  transition: color 0.4s ease;
-  letter-spacing: 1px;
+    font-size: 18px;
+    transition: color 0.4s 
+ease;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: black;
+    padding: 10px 10px;
+}
+/* Default size (desktop / large screens) */
+.service-icon svg {
+  width: 50px;
+  height: 50px;
 }
 
+/* .service-bottom-icon svg {
+  width: 60px;
+  height: 60px;
+  opacity: 0.1; 
+} */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .service-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-bottom-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 576px) {
+  .service-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-bottom-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Optional: Adjust card spacing for small screens */
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Left bottom icon */
-.service-bottom-icon {
+.service-bottom-icon svg {
     position: absolute;
     bottom: -29px;
     left: -1px;
