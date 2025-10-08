@@ -12,7 +12,7 @@ const BlogsSchema = new Schema({
         required : true,
         type: String,
         trim: true,
-        unique: true
+        unique: true                                 
     },
     featured_image: {
         required : true,

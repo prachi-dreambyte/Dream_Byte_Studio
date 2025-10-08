@@ -1,7 +1,0 @@
-PORT=8080
-MONGODB_SRV=mongodb+srv://prachidreambyte_db_user:wGnYkDNdhkgYDURr@dream-byte-studio.frbajt.mongodb.net/dream-byte-studio?retryWrites=true&w=majority
-JWT_KEY=s9G7v!b8Qz2xF4$eH1kL7pR3mT6wV0yN!aD5uC8oZ2rX9jB1
-CLIENT_URL=http://localhost:5173
-# CLIENT_URL=https://dreambytestudio.com
-NODE_ENV=development
-# NODE_ENV=production

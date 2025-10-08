@@ -6,41 +6,35 @@ import Footer from "../../components/Footer";
 
 const Portfolio = () => {
   const portfolios = [
-    "Wedding Shoot",
-    "Fashion Photography",
-    "Nature",
-    "Travel",
-    "Food",
+    "Product Shoot",
+    "Content Creation",
+    "Event Shoot",
+    "E- Commerce Photography",
+    "Fashion and Model Shoots",
     "Architecture",
     "Wildlife",
     "Events",
-    "Corporate",
-    "Street Photography",
+    "Wedding, Videography and Photography",
+    "Documentary",
   ];
 
   // Different images for each portfolio
   const portfolioImages = {
-    "Wedding Shoot": [
-      "/image/demo/Artboard 1 copy.png",
-      "/image/demo/Artboard 1 copy 2.png",
-      "/image/demo/Artboard 1 copy 3.png",
-      "/image/demo/Artboard 1 copy 4.png",
-       "/image/demo/Artboard 1 copy 5.png",
-        "/image/demo/Artboard 1 copy 6.png",
-         "/image/demo/Artboard 1 copy 7.png",
-          "/image/demo/Artboard 1 copy 8.png",
-           "/image/demo/Artboard 1 copy 9.png",
-            "/image/demo/Artboard 1 copy 10.png",
-             "/image/demo/Artboard 1 copy.png",
+    "Product Shoot": [
+      "/image/Img.jpg",
+      "/image/Img.jpg",
+      "/image/Apple.jpg",
+      "/image/Apple.jpg",
+      "/image/Apple.jpg",
     ],
-    "Fashion Photography": [
-      "/image/demo/DSC07211.jpg",
-      "/image/demo/DSC07219.jpg",
-      "/image/demo/DSC07237.jpg",
-      "/image/demo/DSC07246.jpg",
-      "/image/demo/momos.png",
+    "Content Creation": [
+     "/image/400x500.png",
+      "/image/400x500.png",
+       "/image/400x500.png",
+      "/image/400x500.png",
+        "/image/400x500.png",
     ],
-    "Nature": [
+    "Event Shoot": [
       "/image/demo/Artboard 1 copy 5.png",
         "/image/demo/Artboard 1 copy 6.png",
          "/image/demo/Artboard 1 copy 7.png",
@@ -48,40 +42,45 @@ const Portfolio = () => {
       "/image/demo/DSC07219.jpg",
       "/image/demo/DSC07237.jpg",
     ],
-    "Travel": [
+    "E- Commerce Photography": [
       "/image/demo/DSC07211.jpg",
       "/image/demo/DSC07219.jpg",
       "/image/demo/DSC07237.jpg",
     ],
-    "Food": [
+    "Fashion and Model Shoots": [
      "/image/demo/Artboard 1 copy 7.png",
           "/image/demo/DSC07211.jpg",
       "/image/demo/DSC07219.jpg",
     ],
-    "Architecture": [
+    "Ad Flims and Commercial Shoots": [
       "/image/demo/DSC07211.jpg",
       "/image/demo/DSC07219.jpg",
       "/image/demo/DSC07237.jpg",
     ],
-    "Wildlife": [
+    "Postcast Shoot": [
      "/image/demo/Artboard 1 copy 7.png",
           "/image/demo/DSC07211.jpg",
       "/image/demo/DSC07219.jpg",
     ],
-    "Events": [
+    "Short Flim Production": [
       "/images/event1.jpg",
       "/images/event2.jpg",
       "/images/event3.jpg",
     ],
-    "Corporate": [
+    "Real estate Photography": [
       "/images/corp1.jpg",
       "/images/corp2.jpg",
       "/images/corp3.jpg",
     ],
-    "Street Photography": [
+    "Wedding, Videography and Photography": [
       "/images/street1.jpg",
       "/images/street2.jpg",
       "/images/street3.jpg",
+    ],
+        "Documentary": [
+      "/images/corp1.jpg",
+      "/images/corp2.jpg",
+      "/images/corp3.jpg",
     ],
   };
 
