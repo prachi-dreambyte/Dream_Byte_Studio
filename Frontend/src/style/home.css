@@ -1,50 +1,77 @@
-/* ****************HEADER*********************** */
+/* **************** BASE STYLES **************** */
+:root {
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+body {
+  padding-top: 90px;
+}
+
+/* **************** HEADER **************** */
 .logo {
-    width: 95px;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
+  width: 95px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-.DreamHeader{
+
+.DreamHeader {
   font-size: 20px;
-    font-weight: 400;
-    padding-right: 35px;
+  font-weight: 400;
+  padding-right: 35px;
 }
-/* Transparent Navbar */
+
 .navbar-transparent {
   background: #ffffff !important;
   transition: all 0.3s ease;
 }
 
-/* Navbar after scroll */
 .navbar-scrolled {
-  background: #ffffff !important; /* change to your theme color */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-.DreamBtn{
+
+.DreamBtn {
   border: 1px solid;
-    padding: 10px 15px;
-    font-size: 18px;
-    background: black;
-    color: #fff;
-    border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 18px;
+  background: black;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
 }
-.DreamBtn a{
+
+.DreamBtn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.DreamBtn a {
   text-decoration: none;
   color: #fff;
 }
-/* ************************************ */
+
+.nav-link.active {
+  font-weight: 600;
+  color: #000 !important;
+}
+
+/* **************** CAROUSEL **************** */
 .carousel-item img {
-  transition: transform 10s ease; /* Smooth transition */
+  transition: transform 10s ease;
 }
 
 .carousel-item.active img {
-  transform: scale(1.1); /* Zoom in */
+  transform: scale(1.1);
 }
 
 .carousel-item-next img,
 .carousel-item-prev img {
-  transform: scale(1); /* Reset zoom for next/prev */
+  transform: scale(1);
 }
 
 .zoom {
@@ -52,75 +79,85 @@
 }
 
 @keyframes zoomEffect {
-  0% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
 }
-.FrontSecondSection{
-               padding: 70px 0px 40px 0px;
-               background: #f6f6f6;
-        }
-        .DreamFrontSecondSection{
-            max-width: 900px;
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            padding-bottom: 50px;
-        }
-.FrontHeadSection{
-  font-size: 32px;
-    font-weight: 400;
-    text-align: center;
-    padding: 15px 0px;
-    font-family: "Playfair Display", Sans-serif;
-    color: #101112;
-}
-.DreamFrontSecondSection p{
-  line-height:35px;
-    text-align: justify;
-    font-size: 18px;
-    text-align: center;
-    line-height: 35px;
-    color: #363636;
-    font-style: italic;
-    font-weight: 400;
 
+/* **************** SECTIONS **************** */
+.FrontSecondSection {
+  padding: 70px 0px 40px 0px;
+  background: #f6f6f6;
 }
-.DreamFrontSecondSection .DreamCard i{
-  height: 70px;
-    width: 40%;
+
+.FrontSecondSections {
+  padding: 70px 0px 40px 0px;
 }
-.DreamCards
-{   text-align: center;
+
+.DreamFrontSecondSection {
+  max-width: 900px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 50px;
 }
-.DreamPadding{
-  padding: 10px 170px;
+
+.FrontHeadSection {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0px;
+  font-family: "Playfair Display", Sans-serif;
+  color: #101112;
 }
-.DreamCards h5{
+
+.FrontHeadSection::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #363636;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.DreamFrontSecondSection p {
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  color: #363636;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.DreamCards {
+  text-align: center;
+}
+
+.DreamCards h5 {
   padding-top: 15px;
   font-size: 21px;
   color: #363636;
 }
-.DreamCards p{
+
+.DreamCards p {
   padding-top: 15px;
-   color: #363636;
-}
-.DreamSlider{
-  /* border: 1px solid;
-    height: 220px;
-    width: 90% !important; */
-}
-.DreamCards p{
+  color: #363636;
   font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: 1px
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
-.DreamPad{
-padding: 10px 100px;
+
+.DreamPadding {
+  padding: 10px 170px;
 }
-/* ********************************* */
+
+.DreamPad {
+  padding: 10px 100px;
+}
+
+/* **************** IMAGE CONTAINERS **************** */
 .image-container {
   position: relative;
   overflow: hidden;
@@ -141,7 +178,7 @@ padding: 10px 100px;
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,34 +193,34 @@ padding: 10px 100px;
   opacity: 1;
 }
 
-
+/* **************** SERVICE CARDS **************** */
 .service-card {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
-  margin: 0 10px; /* gap between cards */
+  margin: 0 10px;
 }
 
 .service-img {
   width: 100%;
-  height: 350px; /* adjust as needed */
-  object-fit: cover; /* makes image full without stretch */
+  height: 350px;
+  object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
 }
 
 .service-card:hover .service-img {
-  transform: scale(1.1); /* zoom effect */
+  transform: scale(1.1);
 }
 
-.overlay {
+.service-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #F0E7D5; /* dark overlay */
+  background: #F0E7D5;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -197,32 +234,33 @@ padding: 10px 100px;
 
 .service-card:hover .overlay {
   opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
- .card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    padding: 32px 24px;
-    margin: 12px;
-    transition: all 0.4s 
-cubic-bezier(.25, .8, .25, 1);
-    cursor: pointer;
-    border: none;
-    padding: 40px 20px;
-    height: 400px;
-    border-radius: 50% 50% 0% 0%;
-    width: 80%;
-}
-.cards {
-  /* background: #fff; */
+/* **************** CARDS **************** */
+.card {
+  background: #fff;
+  border-radius: 50% 50% 0% 0%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px 20px;
   margin: 12px;
-  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
   cursor: pointer;
-   border: none;
-    padding: 20px 30px;
-    height: 315px;
+  border: none;
+  height: 400px;
+  width: 80%;
 }
+
+.cards {
+  margin: 12px;
+  transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+  cursor: pointer;
+  border: none;
+  padding: 20px 30px;
+  height: 315px;
+}
+
 .card3:hover {
   transform: scale(1.04);
   border: 2px solid #2980b9;
@@ -233,7 +271,7 @@ cubic-bezier(.25, .8, .25, 1);
 .card4:hover {
   filter: brightness(1.1);
   transform: translateY(-10px);
- box-shadow: 4px 4px 10px 3px rgb(149 154 161);
+  box-shadow: 4px 4px 10px 3px rgb(149 154 161);
 }
 
 .card5:hover {
@@ -241,336 +279,19 @@ cubic-bezier(.25, .8, .25, 1);
   box-shadow: 0 5px 10px rgba(142, 68, 173, 0.3);
 }
 
-.DreamSlider .card-image-text {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-/* .card-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 16px;
-  box-sizing: border-box;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4,0.2,0.2,1);
-} */
-
-.DreamSlider:hover .card-content,
-.DreamSlider:focus-within .card-content {
-  transform: translateY(0);
-}
-.homeparallaxwrapImg {
-  background-image: url('/image/demo/REAL ESTATE (6).webp');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;        /* fills without stretching */
-  background-attachment: fixed;
-      height: 660px;  /* keeps image fixed */
-}
-
-.homeparallaxwrap {
-  min-height: 75vh;   
-  font-size: 40px;
-  font-weight: 300;
-  color: #fff;
-  text-align: center;
-  text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.29);
-}
-
-.fullwrap {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-}
-.homeparallaxwrap .tablewrap {
-    background: rgba(0, 0, 0, 0.4);
-    height: 100%;
-}
-.tablewrap {
-    width: 100%;
-    height: 100%;
-    display: table;
-}
-.tablewrap .cellwrap {
-    width: 100%;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-}
-.DreamWrapperParagarph{
-     padding: 59px 30px 10px 30px;
-    font-size: 18px;
-    text-align: center;
-    line-height: 35px;
-    color: #363636;
-    font-style: italic;
-    font-weight: 400;
-}
-.DreamCardImg img{
-width: 100%;
-height: 200px;
-}
-
-
-/* Homepage Testinomial */
-/* FAQ Section */
-.FrontSecondSection{
-               padding: 70px 0px 40px 0px;
-               background: #f6f6f6;
-        }
-.FrontSecondSections {
-     padding: 70px 0px 40px 0px
-}
-
-.FrontHeadSection {
-  font-size: 30px;
-  font-weight: 500;
-  color: #222;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  position: relative;
-}
-
-.FrontHeadSection::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background: #363636;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 3px;
-}
-
-/* Accordion Items */
-.accSpace {
-  margin-bottom: 12px;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.FAQ {
- background: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    color: #363636;
-    padding: 20px 20px;
-    transition: all 0.3s 
-ease-in-out;
-}
-
-.FAQ:hover {
-  background: #c5b79b33;
-  color: #000;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-button:not(.collapsed) {
-  background: #363636;
-  color: #fff;
-}
-
-.accBody {
-      background: #f0e7d533;
-    padding: 20px 20px;
-    font-size: 16px;
-    color: #363636;
-    line-height: 1.6;
-    font-weight: 200;
-}
-/* ................... */
-.services-section {
-  background-image: url('');;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* optional parallax-like effect */
-  min-height: 100vh; 
-      /* padding: 90px 0px; */
-}
-.services-sections {
-  background-image: url('/image/demo/Untitled design (5).png');;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* optional parallax-like effect */
-      padding: 90px 0px;
-}
-.services-sec{
-  background-image: url('/image/demo/2.jpg');;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* optional parallax-like effect */
-      padding: 90px 0px 50px 0px;
-}
-.service-cards {
-     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    /* backdrop-filter: blur(6px); */
-   transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    height: auto;
-   
-  }
-.service-cards:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.icon-box {
-  font-size: 40px;
- 
-}
-
-/* Simple fade-up animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-up {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-/* Arrow button */
-.arrow-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.arrow-btn:hover {
-  background: #ddd;
-}
-/* ...........SCROLL...................... */
-.scroll-icons {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 999;
-}
-
-/* Common Icon Style */
-.scroll-icons .icon-item {
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* Brand Colors */
-.fb { background: #1877F2; }
-.ig { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
-.wa { background: #25d366; }
-.ln { background: #0077b5; }
-.top-btn { background: #333; border: none; }
-
-/* Hover Zoom */
-.scroll-icons .icon-item:hover {
-  transform: scale(1.15);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .scroll-icons {
-    right: 10px;
-    top: auto;
-    bottom: 20px;
-    transform: none;
-    flex-direction: row;
-  }
-
-  .scroll-icons .icon-item {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .scroll-icons {
-    right: 5px;
-    gap: 5px;
-  }
-
-  .scroll-icons .icon-item {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-
-/* ....................................... */
-
-
-:root {
-  --brand-color: hsl(46, 100%, 50%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
-  --font-title: "Montserrat", sans-serif;
-  --font-text: "Lato", sans-serif;
-}
-
 .card1 {
-    display: grid
-;
-    place-items: center;
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-    transition: transform 0.5s 
-ease;
-    margin-bottom: 25px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.5s ease;
+  margin-bottom: 25px;
 }
+
 .card1 > * {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -584,75 +305,55 @@ ease;
 }
 
 .card__content {
-    display: flex
-;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 20%, black 100%);
-    height: 50%;
-    align-self: flex-end;
-    transform: translateY(62%);
-    transition: transform 0.5s 
-ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 20%, black 100%);
+  height: 50%;
+  align-self: flex-end;
+  transform: translateY(62%);
+  transition: transform 0.5s ease;
 }
 
 .card__title {
- display: flex
-;
-    font-size: 25px;
-    /* font-family: var(--font-title); */
-    color: var(--white);
-    position: relative;
-    width: fit-content;
-    letter-spacing: 1.8px;
-    gap: 15px;  
+  display: flex;
+  font-size: 25px;
+  color: var(--white);
+  position: relative;
+  width: fit-content;
+  letter-spacing: 1.8px;
+  gap: 15px;
 }
 
 .card__title::after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    /* left: -1.2rem; */
-    height: 5px;
-    width: calc(100% + 1.2rem);
-    background: #ffffff;
-    transform: scaleX(0);
-    transform-origin: right;
-    opacity: 0;
-    transition: all 0.5s 
-ease;
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  height: 5px;
+  width: calc(100% + 1.2rem);
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: right;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .card__description {
   font-size: 18px !important;
   color: #fff !important;
-  opacity: 0 ;
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
+
 .card__descriptions {
   font-size: 16px !important;
   color: #fff !important;
-  opacity: 0 ;
+  opacity: 0;
   transition: opacity 0.5s ease;
   padding: 0px !important;
 }
-/* .card__button {
-  padding: 0.7em 1.6em;
-  border: none;
-  border-radius: 0.4em;
-  background: var(--brand-color);
-  color: var(--black);
-  font-size: 1.1rem;
-  font-family: var(--font-title);
-  font-weight: bold;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  cursor: pointer;
-} */
 
-/* Hover Effects */
 .card1:hover {
   transform: scale(1.05);
 }
@@ -672,17 +373,225 @@ ease;
 }
 
 .card1:hover .card__description,
-.card1:hover .card__button {
+.card1:hover .card__descriptions {
   opacity: 1;
   transition-delay: 0.5s;
 }
-.card1:hover .card__descriptions,
-.card1:hover .card__button {
-  opacity: 1;
-  transition-delay: 0.5s;
+
+/* **************** PARALLAX **************** */
+.homeparallaxwrapImg {
+  background-image: url('/image/demo/REAL ESTATE (6).webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 660px;
 }
-/* .............3D carousel................. */
-/* Slick strip styles */
+
+.homeparallaxwrap {
+  min-height: 75vh;
+  font-size: 40px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.29);
+}
+
+.fullwrap {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+}
+
+.homeparallaxwrap .tablewrap {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.tablewrap {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.tablewrap .cellwrap {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.DreamWrapperParagarph {
+  padding: 59px 30px 10px 30px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 35px;
+  color: #363636;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.DreamCardImg img {
+  width: 100%;
+  height: 200px;
+}
+
+/* **************** ACCORDION/FAQ **************** */
+.accSpace {
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.FAQ {
+  background: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  color: #363636;
+  padding: 20px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.FAQ:hover {
+  background: #c5b79b33;
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #363636;
+  color: #fff;
+}
+
+.accBody {
+  background: #f0e7d533;
+  padding: 20px 20px;
+  font-size: 16px;
+  color: #363636;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+/* **************** SERVICES SECTIONS **************** */
+.services-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.services-sections {
+  background-image: url('/image/demo/Untitled design (5).png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 90px 0px;
+}
+
+.services-sec {
+  background-image: url('/image/demo/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 90px 0px 50px 0px;
+}
+
+.service-cards {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  height: auto;
+}
+
+.service-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-box {
+  font-size: 40px;
+}
+
+/* **************** ANIMATIONS **************** */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #ddd;
+}
+
+/* **************** SCROLL ICONS **************** */
+.scroll-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.scroll-icons .icon-item {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fb { background: #1877F2; }
+.ig { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.wa { background: #25d366; }
+.ln { background: #0077b5; }
+.top-btn { background: #333; border: none; }
+
+.scroll-icons .icon-item:hover {
+  transform: scale(1.15);
+}
+
+/* **************** SLICK CAROUSEL **************** */
 .slick-strip .slick-slide {
   padding: 0px;
 }
@@ -707,49 +616,462 @@ ease;
   transform-style: preserve-3d;
 }
 
-/* 1st active slide */
-.slick-active .slick-card img
-{
+.slick-active .slick-card img {
   height: 400px;
   transform: rotateY(22deg);
   transform-style: preserve-3d;
 }
 
-/* 2nd active slide */
-.slick-active + .slick-active .slick-card img{
+.slick-active + .slick-active .slick-card img {
   height: 350px;
   transform: rotateY(32deg);
   transform-style: preserve-3d;
 }
 
-/* 3rd active slide */
-
-.slick-active + .slick-active + .slick-active .slick-card img{
+.slick-active + .slick-active + .slick-active .slick-card img {
   height: 330px;
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
 
-/* 4th active slide */
-.slick-active + .slick-active + .slick-active + .slick-active .slick-card img{
+.slick-active + .slick-active + .slick-active + .slick-active .slick-card img {
   height: 350px;
   transform: rotateY(-32deg);
   transform-style: preserve-3d;
 }
 
-/* 5th active slide */
-.slick-active + .slick-active + .slick-active + .slick-active + .slick-active .slick-card img{
+.slick-active + .slick-active + .slick-active + .slick-active + .slick-active .slick-card img {
   height: 400px;
   transform: rotateY(-22deg);
   transform-style: preserve-3d;
 }
 
-/* 6th  slide */
-.slick-active + .slick-active + .slick-active + .slick-active + .slick-active + .slick-slide .slick-card img{
+.slick-active + .slick-active + .slick-active + .slick-active + .slick-active + .slick-slide .slick-card img {
   transform: rotateY(-22deg);
   transform-style: preserve-3d;
 }
-/* .......................................... */
-/* ......................CENTER......................... */
 
-/* ........................................................ */
+.DreamSlider .card-image-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.DreamSlider:hover .card-content,
+.DreamSlider:focus-within .card-content {
+  transform: translateY(0);
+}
+
+/* ============================= RESPONSIVE MEDIA QUERIES ============================= */
+
+/* Extra Large Screens - 1921px and above */
+@media (min-width: 1921px) {
+  body { padding-top: 100px; }
+  .container { max-width: 1800px; }
+  .FrontHeadSection { font-size: 42px; }
+  .DreamHeader { font-size: 22px; padding-right: 40px; }
+  .logo { width: 110px; }
+}
+
+/* Large Desktop - 1440px to 1920px */
+@media (min-width: 1440px) and (max-width: 1920px) {
+  body { padding-top: 95px; }
+  .DreamHeader { font-size: 20px; padding-right: 35px; }
+  .FrontHeadSection { font-size: 36px; }
+}
+
+/* Standard Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  body { padding-top: 90px; }
+  .DreamHeader { font-size: 18px; padding-right: 25px; }
+  .DreamPadding { padding: 10px 100px; }
+  .DreamPad { padding: 10px 60px; }
+  .FrontHeadSection { font-size: 30px; }
+}
+
+/* Tablet Landscape & Small Desktop - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body { padding-top: 85px; }
+  .logo { width: 85px; }
+  .DreamHeader { font-size: 17px; padding-right: 20px; }
+  .DreamBtn { padding: 8px 12px; font-size: 16px; }
+  .DreamPadding { padding: 10px 60px; }
+  .DreamPad { padding: 10px 40px; }
+  .FrontHeadSection { font-size: 28px; }
+  .card { height: 380px; width: 85%; }
+  .service-img { height: 300px; }
+  .homeparallaxwrapImg { height: 550px; }
+}
+
+/* Tablet Portrait - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body { padding-top: 80px; }
+  .logo { width: 80px; }
+  .navbar-nav { padding-top: 15px; }
+  .DreamHeader { font-size: 18px; padding-right: 0; padding: 8px 0; }
+  .DreamBtn { padding: 10px 20px; font-size: 16px; margin-top: 10px; width: 100%; text-align: center; }
+  .DreamPadding { padding: 10px 40px; }
+  .DreamPad { padding: 10px 30px; }
+  .FrontHeadSection { font-size: 26px; }
+  .DreamFrontSecondSection p { font-size: 16px; line-height: 28px; }
+  .card { height: 350px; width: 90%; margin: 12px auto; }
+  .cards { height: auto; padding: 15px 20px; }
+  .service-img { height: 280px; }
+  .homeparallaxwrapImg { height: 500px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 32px; }
+  .card1 { max-width: 350px; height: 450px; }
+  .slick-card img { height: 350px; }
+  .scroll-icons { right: 15px; }
+  .scroll-icons .icon-item { width: 42px; height: 42px; }
+}
+
+/* Mobile Landscape & Small Tablet - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  body { padding-top: 75px; }
+  .logo { width: 75px; }
+  .navbar-nav { padding-top: 15px; }
+  .DreamHeader { font-size: 17px; padding-right: 0; padding: 10px 0; text-align: center; }
+  .DreamBtn { padding: 10px 15px; font-size: 16px; margin-top: 15px; width: 100%; }
+  .DreamPadding { padding: 10px 20px; }
+  .DreamPad { padding: 10px 20px; }
+  .FrontHeadSection { font-size: 24px; padding: 10px 0px; }
+  .FrontSecondSection { padding: 50px 0px 30px 0px; }
+  .DreamFrontSecondSection { padding-bottom: 30px; }
+  .DreamFrontSecondSection p { font-size: 16px; line-height: 26px; }
+  .DreamCards h5 { font-size: 19px; }
+  .DreamCards p { font-size: 16px; }
+  .card { height: 320px; width: 95%; padding: 30px 15px; }
+  .cards { height: auto; padding: 15px; }
+  .service-img { height: 250px; }
+  .homeparallaxwrapImg { height: 450px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 28px; }
+  .DreamWrapperParagarph { padding: 40px 20px 10px 20px; font-size: 16px; line-height: 28px; }
+  .card1 { max-width: 320px; height: 420px; }
+  .card__title { font-size: 22px; }
+  .card__description { font-size: 16px !important; }
+  .slick-card img { height: 320px; }
+  .scroll-icons { right: 10px; top: auto; bottom: 20px; transform: none; ; }
+  .scroll-icons .icon-item { width: 40px; height: 40px; }
+  .FAQ { font-size: 18px; padding: 15px; }
+  .accBody { padding: 15px; font-size: 15px; }
+}
+
+/* Mobile Portrait - 480px to 575px */
+@media (min-width: 480px) and (max-width: 575px) {
+  body { padding-top: 70px; }
+  .logo { width: 70px; }
+  .navbar-nav { padding-top: 15px; }
+  .DreamHeader { font-size: 16px; padding-right: 0; padding: 10px 0; text-align: center; }
+  .nav-link { padding: 8px 0 !important; }
+  .DreamBtn { padding: 10px 15px; font-size: 15px; margin-top: 15px; width: 100%; }
+  .DreamPadding { padding: 10px 15px; }
+  .DreamPad { padding: 10px 15px; }
+  .FrontHeadSection { font-size: 22px; padding: 10px 15px; }
+  .FrontSecondSection { padding: 40px 0px 30px 0px; }
+  .DreamFrontSecondSection { padding-bottom: 25px; }
+  .DreamFrontSecondSection p { font-size: 15px; line-height: 24px; padding: 0 10px; }
+  .DreamCards h5 { font-size: 18px; padding-top: 10px; }
+  .DreamCards p { font-size: 15px; padding-top: 10px; }
+  .card { height: 300px; width: 100%; padding: 25px 15px; margin: 10px auto; }
+  .cards { height: auto; padding: 15px; margin: 8px; }
+  .service-img { height: 220px; }
+  .service-card { margin: 0 5px; }
+  .homeparallaxwrapImg { height: 400px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 24px; min-height: 60vh; }
+  .DreamWrapperParagarph { padding: 30px 15px 10px 15px; font-size: 15px; line-height: 26px; }
+  .DreamCardImg img {height: 180px; }
+  .card1 { max-width: 100%; height: 400px; margin-bottom: 20px; }
+  .card__title { font-size: 20px; gap: 10px; }
+  .card__description { font-size: 15px !important; }
+  .card__descriptions { font-size: 14px !important; }
+  .slick-card img { height: 280px; }
+  .scroll-icons { right: 5px; bottom: 15px; gap: 8px; ; }
+  .scroll-icons .icon-item { width: 38px; height: 38px; }
+  .FAQ { font-size: 17px; padding: 15px; }
+  .accBody { padding: 15px; font-size: 14px; }
+  .services-sections, .services-sec { padding: 60px 0px 40px 0px; background-attachment: scroll; }
+  .service-cards { padding: 15px; margin-bottom: 15px; }
+  .icon-box { font-size: 32px; }
+}
+
+/* Small Mobile - 414px to 479px */
+@media (min-width: 414px) and (max-width: 479px) {
+  body { padding-top: 70px; }
+  .logo { width: 65px; }
+  .navbar-toggler { padding: 5px 8px; }
+  .navbar-nav { padding-top: 15px; }
+  .DreamHeader { font-size: 16px; padding: 10px 0; text-align: center; }
+  .nav-link { padding: 8px 0 !important; }
+  .DreamBtn { padding: 10px; font-size: 15px; margin-top: 15px; width: 100%; }
+  .DreamPadding { padding: 10px; }
+  .DreamPad { padding: 10px; }
+  .FrontHeadSection { font-size: 20px; padding: 10px; }
+  .FrontSecondSection { padding: 40px 0px 25px 0px; }
+  .DreamFrontSecondSection { padding-bottom: 20px; padding: 0 10px 20px 10px; }
+  .DreamFrontSecondSection p { font-size: 14px; line-height: 22px; }
+  .DreamCards h5 { font-size: 17px; padding-top: 8px; }
+  .DreamCards p { font-size: 14px; padding-top: 8px; }
+  .card { height: 280px; width: 100%; padding: 20px 10px; margin: 8px auto; }
+  .cards { height: auto; padding: 12px; margin: 8px; }
+  .service-img { height: 200px; }
+  .service-card { margin: 0 5px; }
+  .homeparallaxwrapImg { height: 350px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 22px; min-height: 50vh; }
+  .DreamWrapperParagarph { padding: 25px 10px 10px 10px; font-size: 14px; line-height: 24px; }
+  .DreamCardImg img { height: 160px; }
+  .card1 { max-width: 100%; height: 380px; margin-bottom: 15px; }
+  .card__title { font-size: 19px; gap: 8px; }
+  .card__description { font-size: 14px !important; }
+  .card__descriptions { font-size: 13px !important; }
+  .slick-card img { height: 260px; }
+  .scroll-icons { right: 5px; bottom: 15px; gap: 6px; ; }
+  .scroll-icons .icon-item { width: 36px; height: 36px; font-size: 14px; }
+  .FAQ { font-size: 16px; padding: 12px; }
+  .accBody { padding: 12px; font-size: 14px; }
+  .services-sections, .services-sec { padding: 50px 0px 30px 0px; background-attachment: scroll; }
+  .service-cards { padding: 12px; margin-bottom: 12px; }
+  .icon-box { font-size: 30px; }
+}
+
+/* Extra Small Mobile - 375px to 413px */
+@media (min-width: 375px) and (max-width: 413px) {
+  body { padding-top: 65px; }
+  .logo { width: 60px; }
+  .navbar-toggler { padding: 4px 7px; }
+  .navbar-nav { padding-top: 12px; }
+  .DreamHeader { font-size: 15px; padding: 8px 0; text-align: center; }
+  .nav-link { padding: 6px 0 !important; }
+  .DreamBtn { padding: 8px; font-size: 14px; margin-top: 12px; width: 100%; }
+  .DreamPadding { padding: 8px; }
+  .DreamPad { padding: 8px; }
+  .FrontHeadSection { font-size: 19px; padding: 8px; }
+  .FrontSecondSection { padding: 35px 0px 20px 0px; }
+  .DreamFrontSecondSection { padding: 0 8px 15px 8px; }
+  .DreamFrontSecondSection p { font-size: 14px; line-height: 22px; }
+  .DreamCards h5 { font-size: 16px; padding-top: 8px; }
+  .DreamCards p { font-size: 14px; padding-top: 8px; }
+  .card { height: 260px; width: 100%; padding: 18px 8px; margin: 8px auto; }
+  .cards { height: auto; padding: 10px; margin: 6px; }
+  .service-img { height: 180px; }
+  .service-card { margin: 0 3px; }
+  .homeparallaxwrapImg { height: 320px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 20px; min-height: 50vh; }
+  .DreamWrapperParagarph { padding: 20px 8px 8px 8px; font-size: 14px; line-height: 22px; }
+  .DreamCardImg img { height: 150px; }
+  .card1 { max-width: 100%; height: 360px; margin-bottom: 15px; }
+  .card__title { font-size: 18px; gap: 8px; }
+  .card__description { font-size: 13px !important; }
+  .card__descriptions { font-size: 12px !important; }
+  .slick-card img { height: 240px; }
+  .scroll-icons { right: 5px; bottom: 12px; gap: 5px; ; }
+  .scroll-icons .icon-item { width: 35px; height: 35px; font-size: 13px; }
+  .FAQ { font-size: 15px; padding: 12px; }
+  .accBody { padding: 12px; font-size: 13px; }
+  .services-sections, .services-sec { padding: 45px 0px 25px 0px; background-attachment: scroll; }
+  .service-cards { padding: 10px; margin-bottom: 10px; }
+  .icon-box { font-size: 28px; }
+}
+
+/* Minimum Mobile - 360px to 374px */
+@media (min-width: 360px) and (max-width: 374px) {
+  body { padding-top: 65px; }
+  .logo { width: 55px; }
+  .navbar-brand { padding: 5px 0; }
+  .navbar-toggler { padding: 4px 6px; font-size: 18px; }
+  .navbar-nav { padding-top: 10px; }
+  .DreamHeader { font-size: 15px; padding: 8px 0; text-align: center; }
+  .nav-link { padding: 6px 0 !important; }
+  .DreamBtn { padding: 8px; font-size: 14px; margin-top: 12px; width: 100%; }
+  .DreamPadding { padding: 5px; }
+  .DreamPad { padding: 5px; }
+  .FrontHeadSection { font-size: 18px; padding: 8px 5px; }
+  .FrontSecondSection { padding: 30px 0px 20px 0px; }
+  .DreamFrontSecondSection { padding: 0 5px 15px 5px; }
+  .DreamFrontSecondSection p { font-size: 13px; line-height: 20px; }
+  .DreamCards h5 { font-size: 16px; padding-top: 6px; }
+  .DreamCards p { font-size: 13px; padding-top: 6px; }
+  .card { height: 250px; width: 100%; padding: 15px 8px; margin: 6px auto; }
+  .cards { height: auto; padding: 10px; margin: 5px; }
+  .service-img { height: 170px; }
+  .service-card { margin: 0 2px; }
+  .overlay { font-size: 16px; padding: 15px; }
+  .homeparallaxwrapImg { height: 300px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 18px; min-height: 45vh; }
+  .DreamWrapperParagarph { padding: 20px 8px 8px 8px; font-size: 13px; line-height: 20px; }
+  .DreamCardImg img { height: 140px; }
+  .card1 { max-width: 100%; height: 340px; margin-bottom: 12px; }
+  .card__content { padding: 8px 15px; }
+  .card__title { font-size: 17px; gap: 6px; letter-spacing: 1px; }
+  .card__description { font-size: 13px !important; }
+  .card__descriptions { font-size: 12px !important; }
+  .slick-card img { height: 220px; }
+  .scroll-icons { right: 3px; bottom: 10px; gap: 5px; ; }
+  .scroll-icons .icon-item { width: 33px; height: 33px; font-size: 12px; }
+  .FAQ { font-size: 15px; padding: 10px; }
+  .accBody { padding: 10px; font-size: 13px; }
+  .services-sections, .services-sec { padding: 40px 0px 20px 0px; background-attachment: scroll; }
+  .service-cards { padding: 10px; margin-bottom: 10px; }
+  .icon-box { font-size: 26px; }
+  .arrow-btn { width: 35px; height: 35px; font-size: 14px; }
+  .DreamCards {text-align: center; padding: 10px 25px;}
+}
+
+/* Very Small Devices - Below 360px */
+@media (max-width: 359.98px) {
+  .DreamCards {text-align: center; padding: 10px 25px;}
+  body { padding-top: 60px; }
+  .logo { width: 50px; }
+  .navbar-brand { padding: 3px 0; }
+  .navbar-toggler { padding: 3px 5px; font-size: 16px; }
+  .navbar-nav { padding-top: 10px; }
+  .DreamHeader { font-size: 14px; padding: 6px 0; text-align: center; }
+  .nav-link { padding: 5px 0 !important; }
+  .DreamBtn { padding: 7px; font-size: 13px; margin-top: 10px; width: 100%; }
+  .DreamPadding { padding: 5px; }
+  .DreamPad { padding: 5px; }
+  .FrontHeadSection { font-size: 17px; padding: 6px 5px; }
+  .FrontSecondSection { padding: 25px 0px 15px 0px; }
+  .DreamFrontSecondSection { padding: 0 5px 12px 5px; }
+  .DreamFrontSecondSection p { font-size: 13px; line-height: 20px; }
+  .DreamCards h5 { font-size: 15px; padding-top: 5px; }
+  .DreamCards p { font-size: 13px; padding-top: 5px; }
+  .card { height: 240px; width: 100%; padding: 12px 6px; margin: 5px auto; }
+  .cards { height: auto; padding: 8px; margin: 5px; }
+  .service-img { height: 160px; }
+  .service-card { margin: 0 2px; }
+  .overlay { font-size: 14px; padding: 12px; }
+  .homeparallaxwrapImg { height: 280px; background-attachment: scroll; }
+  .homeparallaxwrap { font-size: 16px; min-height: 40vh; }
+  .DreamWrapperParagarph { padding: 15px 5px 5px 5px; font-size: 13px; line-height: 20px; }
+  .DreamCardImg img { height: 130px; }
+  .card1 { max-width: 100%; height: 320px; margin-bottom: 10px; }
+  .card__content { padding: 8px 12px; }
+  .card__title { font-size: 16px; gap: 5px; letter-spacing: 0.5px; }
+  .card__description { font-size: 12px !important; }
+  .card__descriptions { font-size: 11px !important; }
+  .slick-card img { height: 200px; }
+  .scroll-icons { right: 2px; bottom: 8px; gap: 4px; ; }
+  .scroll-icons .icon-item { width: 30px; height: 30px; font-size: 11px; }
+  .FAQ { font-size: 14px; padding: 10px; }
+  .accBody { padding: 10px; font-size: 12px; }
+  .services-sections, .services-sec { padding: 35px 0px 20px 0px; background-attachment: scroll; }
+  .service-cards { padding: 8px; margin-bottom: 8px; }
+  .icon-box { font-size: 24px; }
+  .arrow-btn { width: 32px; height: 32px; font-size: 12px; }
+}
+
+
+/* **************** SLICK CAROUSEL **************** */
+.slick-strip .slick-slide {
+  padding: 0px;
+}
+
+.slick-strip .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-card {
+  border-radius: 20px;
+  perspective: 1000px;
+}
+
+.slick-card img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.8s ease-in-out, height 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Desktop 3D carousel effects */
+@media (min-width: 992px) {
+  .slick-active .slick-card img {
+    height: 400px;
+    transform: rotateY(22deg);
+    transform-style: preserve-3d;
+  }
+
+  .slick-active + .slick-active .slick-card img {
+    height: 350px;
+    transform: rotateY(32deg);
+    transform-style: preserve-3d;
+  }
+
+  .slick-active + .slick-active + .slick-active .slick-card img {
+    height: 330px;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+
+  .slick-active + .slick-active + .slick-active + .slick-active .slick-card img {
+    height: 350px;
+    transform: rotateY(-32deg);
+    transform-style: preserve-3d;
+  }
+
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active .slick-card img {
+    height: 400px;
+    transform: rotateY(-22deg);
+    transform-style: preserve-3d;
+  }
+
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active + .slick-slide .slick-card img {
+    transform: rotateY(-22deg);
+    transform-style: preserve-3d;
+  }
+}
+
+/* Mobile/Tablet simple carousel - no 3D effects */
+@media (max-width: 991px) {
+  .slick-card {
+    border-radius: 15px;
+    perspective: none;
+  }
+  
+  .slick-card img {
+    height: 270px;
+    transform: none;
+    transform-style: flat;
+    border-radius: 15px;
+    padding: 0px 5px;
+  }
+  
+  .slick-active .slick-card img {
+    height: 350px;
+    transform: none;
+  }
+  
+  .slick-strip .slick-dots {
+    bottom: -35px;
+  }
+  
+  .slick-strip .slick-dots li button:before {
+    font-size: 10px;
+  }
+}
+
+.DreamSlider .card-image-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.DreamSlider:hover .card-content,
+.DreamSlider:focus-within .card-content {
+  transform: translateY(0);
+}

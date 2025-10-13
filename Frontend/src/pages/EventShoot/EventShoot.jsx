@@ -6,7 +6,8 @@ import '../../style/Home.css';
 import '../../style/ServiceDetails.css';
 
 
-const ServiceDetail = () => {
+const EventShoot
+ = () => {
   const [activeService, setActiveService] = useState("");
   const navigate = useNavigate();
 
@@ -36,9 +37,9 @@ const ServiceDetail = () => {
     <section className="ContactSection services-sections">
       <div className="container-fluid">
         <div className='ServicePadding SectionFrontSecondSection'>
-             <h1 className='FrontHeadSection'>Product Shoot</h1>
-        <p>In case of product-based company, products are the main asset and therefore it is important to make any company display its products in their social media, ecommerce website and advertisements as it is what triggers
-         the intention among customers to purchase the product. Our product photography services are offered to businesses that seek to improve their sales.</p>
+             <h1 className='FrontHeadSection'>Event Shoot</h1>
+        <p>Every event is a story waiting to be told - full of emotions, energy, and unforgettable moments. At Dream Byte Studio, we provide professional event photography and 
+            videography services that capture every extract of your special moment so that your memory never fades away.</p>
         </div>
            <div className="media-container">
         {/* Image */}
@@ -67,8 +68,8 @@ const ServiceDetail = () => {
                 <h1 className="FrontHeadSection text-center mb-5">
                   Service Description
                 </h1>
-             <p className="">Dream Byte Studios is an creative product photography and video production studio where we shoot creative and high quality images of your products and video in order to make your brand shine. We also handle any type of product shoots, be it a studio shoot all your products to be used in your online store or be it a creative lifestyle product shoot that you need to launch in your marketing campaign, we will take care of all.
-             <br/> Our professional photographers and videographers combine creativity and technology to bring life to your product photography. We are confident in providing the finest quality work to our clients.
+             <p className="">Our event photography is designed to cover every detail of your special occasion, whether it's cultural events, corporate gatherings, birthday events, engagement, anniversary, or any kind of occasion. We capture and create timeless memories.
+             <br/> We deliver high-quality visuals that capture every smile, performance, and highlight, showing the mood, scale, and spirit of your moment. From candid shot to cinematic coverage, and from event videos to event photos we beautifully document your event.
              </p>
               <div className="quote-section">
               <div className="quote-icon">
@@ -83,26 +84,30 @@ const ServiceDetail = () => {
                 <div className='row'>
                   <div className='col-md-6'>
                     <h6 className="">
-                 High-resolution photography</h6>
-                 <p>We provide our quality photography and videography services to your digital platform, web, and marketing advertisement.
+                    Complete Event Coverage</h6>
+                 <p>We also create highlights of your special day with engaging videos that summarize the best moments.
 </p>
                   </div>
                    <div className='col-md-6'>
                     <h6 className="">
-                 Creative styling and setup</h6>
+                    Highlight Films</h6>
                  <p>We have the experience of putting your product photography ideas to practice. We will incorporate props, backgrounds and themes which are aligned with your brand.
 </p>
                    </div>
                     <div className='col-md-6'>
                       <h6 className="">
-                 E-Commerce ready</h6>
-                 <p>Our product photoshoot studio is specialized in product photography which is optimized to be used on Amazon, Flipkart, Shopify, or your website.</p>
+                 Candid Storytelling
+</h6>
+                 <p>We capture natural and beautifully composed frames to make cinematic videos and candid event videos and photos.
+</p>
 
                     </div>
                      <div className='col-md-6'>
                       <h6 className="">
-                       Editing and Retouching</h6>
-                       <p>We will also give you polished, high quality, edited images and videos of you with a photoshoot that meets your brand standards.</p>
+                       Expert Editing
+</h6>
+                       <p>We provide fully edited images and videos from shoot to editing; we take care of all.
+</p>
                      </div>
                      </div>
                 </div>
@@ -112,21 +117,25 @@ const ServiceDetail = () => {
                 </h1>
                 <ul>
                   <li>
-                    <h4>Creative Briefing & Planning</h4>
-                    <p className="">We chat about your brand, target audience, and direction, prior to commencement so that we can align your brand vision.</p>
+                    <h4>Pre-event consultation</h4>
+                    <p className="">We provide a pre-event consultation session to help you decide the theme, schedule, and key moments to capture for your event videos and photos.</p>
                   </li>
                   <li>
-                    <h4>Professional Photography System.</h4>
-                    <p className="">We possess a professional product photoshoot studio equipped, lighting and modern equipment to shoot and also offer lifestyle product shoots.
-</p>
+                    <h4>Full event coverage</h4>
+                    <p className="">Our team will cover your event from start to finish, so every special moment will be captured in our frames</p>
                   </li>
                   <li>
-                    <h4>Creative Briefing & Planning</h4>
-                    <p className="">We chat about your brand, target audience, and direction, prior to commencement so that we can align your brand vision.</p>
+                    <h4>Edited high-resolution photos</h4>
+                    <p className="">Our team of expert editors will edit all images and photos in high resolution in print and digital form.</p>
                   </li>
                   <li>
-                    <h4>Creative Briefing & Planning</h4>
-                    <p className="">We chat about your brand, target audience, and direction, prior to commencement so that we can align your brand vision.</p>
+                    <h4>Event highlight video</h4>
+                    <p className="">We will create a highlight video of the special moments of the event.</p>
+                  </li>
+                  <li>
+                    <h4>Fast delivery</h4>
+                    <p className="">We ensure the timely delivery of your event coverage whether its birthday event, cultural event, or corporate event photography
+Searching for professional event photography ? Let Dream Byte Studio capture your events. Contact us now to book your shoot!</p>
                   </li>
                 </ul>
                 <hr></hr>
@@ -149,14 +158,14 @@ const ServiceDetail = () => {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                  So what is the importance of professional product photography in e-commerce?</button>
+                  What types of events do you cover with your event photography services?</button>
                 </h4>
                 <div
                   id="collapseOne"
                   className="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
-                  <div className="accordion-body accBody">We establish trust and win customers by means of high-quality professional product photography. We also generate brand image by professional photography.
+                  <div className="accordion-body accBody">We cover a wide range of events including birthday events, cultural event, corporate events, parties etc. Our team ensure professional coverage for every occasion.
                   </div>
                 </div>
               </div>
@@ -172,7 +181,8 @@ const ServiceDetail = () => {
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    What is the cost of product photoshoot?
+                    Do you provide both event photography and event videography?
+
                   </button>
                 </h4>
                 <div
@@ -181,8 +191,7 @@ const ServiceDetail = () => {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body accBody">
-                   These are based on the nature of the products, quantity of items, the styling needs and whether 
-                   the photographs are lifestyle or studio. We provide you with a budget friendly package. 
+                  Yes, Dream Byte Studio offer both photography and videography services. Every detail of your event will be covered by our team. 
 
                   </div>
                 </div>
@@ -199,7 +208,7 @@ const ServiceDetail = () => {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Do you offer e-commerce-ready photos to online stores such as Amazon and Flipkart?
+                   Will I get edited photos and event highlight videos?
                     </button>
                 </h4>
                 <div
@@ -208,7 +217,7 @@ const ServiceDetail = () => {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body accBody">
-                   Yes, we provide e-commerce-optimized images which give your e-commerce site a professional appearance and increases engagement.
+                   Yes, with photography and videography Our packages also include editing of your photos and videos for better quality.
                   </div>
                 </div>
               </div>
@@ -224,7 +233,7 @@ const ServiceDetail = () => {
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                  Do you also do lifestyle product shoots?
+                  Can you customize event photography packages according to my needs?
 
                   </button>
                 </h4>
@@ -234,7 +243,7 @@ const ServiceDetail = () => {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body accBody">
-                    Absolutely! We also offer lifestyle product photography in addition to studio shoot to demonstrate your products in real-life situations.
+                    Absolutely! We offer tailored packages based on your event type, duration, and requirement, Our packages are budget friendly.
                   </div>
                 </div>
               </div>
@@ -250,7 +259,7 @@ const ServiceDetail = () => {
                     aria-expanded="false"
                     aria-controls="collapseFive"
                   >
-                   What is the duration of final product images delivery?
+                  How long does it take to deliver the photos and videos?
 
                   </button>
                 </h4>
@@ -260,7 +269,7 @@ const ServiceDetail = () => {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body accBody">
-                  Time is based on the size of the project and the number of product lines, however, on average, we complete the editing of photos in 5 to 7 working days.
+                  It depands on your event type and duration of video but the standard time for delivery is 7-10 business days.
                   </div>
                 </div>
               </div>
@@ -300,4 +309,5 @@ const ServiceDetail = () => {
 }
 
 
-export default ServiceDetail
+export default EventShoot
+

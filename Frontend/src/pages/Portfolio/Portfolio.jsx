@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style/portfolio.css";
-import Header from "../../components/header";
 import Footer from "../../components/Footer";
 
 const Portfolio = () => {
@@ -21,11 +20,21 @@ const Portfolio = () => {
   // Different images for each portfolio
   const portfolioImages = {
     "Product Shoot": [
-      "/image/Img.jpg",
-      "/image/Img.jpg",
-      "/image/Apple.jpg",
-      "/image/Apple.jpg",
-      "/image/Apple.jpg",
+      "/image/productshoot/7.webp",
+      "/image/productshoot/2.webp",
+      "/image/productshoot/3.webp",
+      "/image/productshoot/4.webp",
+      "/image/productshoot/5.webp",
+      "/image/productshoot/6.webp",
+      "/image/productshoot/1.webp",
+      "/image/productshoot/8.webp",
+      "/image/productshoot/9.webp",
+      "/image/productshoot/10.webp",
+      "/image/productshoot/11.webp",
+      "/image/productshoot/12.webp",
+      "/image/productshoot/13.webp",
+      "/image/productshoot/14.webp",
+      "/image/productshoot/15.webp",
     ],
     "Content Creation": [
      "/image/400x500.png",

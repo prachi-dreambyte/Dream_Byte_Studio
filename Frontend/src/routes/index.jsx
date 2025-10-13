@@ -15,7 +15,15 @@ const Portfolio = lazy(() => import("../pages/Portfolio/Portfolio.jsx"));
 const Blogs = lazy(() => import("../pages/Blogs/Blogs.jsx"));
 const Services = lazy(() => import("../pages/Services/Services.jsx"));
 const BlogDetail = lazy(() => import("../pages/BlogDetail/BlogDetail.jsx"));
-const ServiceDetail = lazy(() => import("../pages/ServiceDetail/ServiceDetail.jsx"));
+const ProductShoot = lazy(() => import("../pages/ProductShoot/ProductShoot.jsx"));
+const ContentCreation = lazy(() => import("../pages/ContentCreation/ContentCreation.jsx"));
+  const EventShoot = lazy(() => import("../pages/EventShoot/EventShoot.jsx"));
+  const ECommerceShoot = lazy(() => import("../pages/ECommerceShoot/ECommerceShoot.jsx"));
+  const FashionAndModel = lazy(() => import("../pages/FashionAndModel/FashionAndModel.jsx"));
+  const AdFlimsAndCommercialShoots = lazy(() => import("../pages/AdFlimsAndCommercialShoots/AdFlimsAndCommercialShoots.jsx"));
+  const PodcastShoot = lazy(() => import("../pages/PodcastShoot/PodcastShoot.jsx"));
+  const ShortFlimProduction = lazy(() => import("../pages/ShortFlimProduction/ShortFlimProduction.jsx"));
+  const RealEstateProduction = lazy(() => import("../pages/RealEstateProduction/RealEstateProduction.jsx"));
 const LoginPage = lazy(() => import("../pages/Auth/login.jsx"));
 
 export const routes = [
@@ -30,7 +38,15 @@ export const routes = [
       { path: "blogs", element: <Blogs /> },
       { path: "services", element: <Services /> },
       { path: "blogs/:id", element: <BlogDetail /> },
-      { path: "services/:id", element: <ServiceDetail /> },
+      { path: "services/ProductShoot", element:<ProductShoot /> },
+      { path: "services/ECommerceShoot", element: <ECommerceShoot /> },
+        { path: "services/FashionAndModel", element: <FashionAndModel /> },
+          { path: "services/EventShoot", element: <EventShoot /> },
+            { path: "services/AdFlimsAndCommercialShoots", element: <AdFlimsAndCommercialShoots /> },
+              { path: "services/PodcastShoot", element: <PodcastShoot /> },
+                { path: "services/ShortFlimProduction", element: <ShortFlimProduction /> },
+                  { path: "services/RealEstateProduction", element: <RealEstateProduction /> }, 
+                   { path: "services/ContentCreation", element: <ContentCreation /> },
     ],
   },
 

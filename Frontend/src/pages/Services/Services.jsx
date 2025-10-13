@@ -1,7 +1,6 @@
 import React from "react";
 import "../../style/services.css";
 import "../../style/home.css";
-import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import { FaCamera, FaVideo, FaPhotoVideo, FaGreaterThan } from "react-icons/fa";
 import { 
@@ -26,7 +25,8 @@ function Services() {
       desc: "Capturing timeless moments with creative frames.",
       icon: <Package/>,
       icon1: <FaCamera/>,
-      img: "/image/Img.jpg",
+      img: "/image/productshoot/15.webp",
+       link: "/services/ProductShoot", 
     },
     {
       title: "Content Creation",
@@ -34,6 +34,7 @@ function Services() {
       icon: <Pencil/>,
        icon1: <FaCamera/>,
       img: "/image/Apple.jpg",
+       link: "/services/ContentCreation", 
     },
     {
       title: "Event Shoot",
@@ -41,6 +42,7 @@ function Services() {
       icon: <Calendar />,
        icon1: <FaCamera/>,
       img: "/image/400x500.png",
+       link: "/services/EventShoot", 
     },
     {
       title: "E-Commerce Photography",
@@ -48,6 +50,7 @@ function Services() {
       icon: <ShoppingCart/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/ECommercePhotography", 
     },
     {
       title: "Fashion and Model Shoots",
@@ -55,6 +58,7 @@ function Services() {
       icon: <Sparkles/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/FashionAndModelShoot", 
     },
     {
       title: "Ad Films and Commercial shoots",
@@ -62,6 +66,7 @@ function Services() {
       icon: <Film/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/AdFilmsAndCommercialShoots", 
     },
     {
       title: "Podcast Shoot",
@@ -69,6 +74,7 @@ function Services() {
       icon: <Mic/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/PodcastShoot", 
     },
     {
       title: "Short Flim Production",
@@ -76,6 +82,7 @@ function Services() {
       icon: <Clapperboard/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/ShortFlimProduction", 
     },
      {
       title: "Real estate photography",
@@ -83,6 +90,7 @@ function Services() {
       icon: <Home/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/RealEstatePhotography", 
     },
      {
       title: "Wedding, Videography and Photography",
@@ -90,6 +98,7 @@ function Services() {
       icon: <Heart/>,
        icon1: <FaCamera/>,
       img: "/image/demo/WEDDING (2).webp",
+       link: "/services/WeddingVideographyAndPhotography", 
     },
     {
       title: "Documentary",
@@ -97,8 +106,10 @@ function Services() {
       icon: <FileVideo/>,
        icon1: <FaCamera/>,
       img: "/image/MAN13348-2-1920x1080.jpg",
+       link: "/services/Documentary", 
     },
   ];
+
 
   return (
     <>
@@ -125,25 +136,31 @@ function Services() {
               <div className="container-fluid DreamPadding">
 
               <div className="row">
-                {services.map((service, index) => (
-                  <div className="col-md-4 mb-4" key={index}>
-                    <div className="service-card" style={{"--delay": `${index * 0.2}s`}}>
-                      <div className="service-img" style={{ backgroundImage: `url(${service.img})` }}></div>
-    <div className="service-content">
-      <div className="service-icon">{service.icon}</div>
-      <h3>{service.title}</h3>
-      <p>{service.desc}</p>
-    </div>
-    <div className="service-bottom-icon">{service.icon1}</div>
-   <Link to="/services/films-showcasing" className="service-right-btn">
-  <FaGreaterThan className="arrow" />
-</Link>
-  </div>
-</div>
+    {services.map((service, index) => (
+      <div className="col-md-4 mb-4" key={index}>
+        <div className="service-card" style={{ "--delay": `${index * 0.2}s` }}>
+          <div
+            className="service-img"
+            style={{ backgroundImage: `url(${service.img})` }}
+          ></div>
 
-                ))}
-              </div>
-            </div>
+          <div className="service-content">
+            <div className="service-icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+          </div>
+
+          <div className="service-bottom-icon">{service.icon1}</div>
+
+          {/* 👇 Dynamic link here */}
+          <Link to={service.link} className="service-right-btn">
+            <FaGreaterThan className="arrow" />
+          </Link>
+        </div>
+      </div>
+    ))}
+      </div>
+        </div>
       </section>
 
       {/* <Footer /> */}

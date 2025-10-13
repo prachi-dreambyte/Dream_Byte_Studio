@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom"; // ✅ Use React Router
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../style/home.css";
@@ -22,6 +22,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on link click
+  const closeMobileMenu = () => {
+    const navbarCollapse = document.getElementById("navbarContent");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+  };
+
   return (
     <>
       <Social />
@@ -32,7 +43,7 @@ const Header = () => {
       >
         <div className="container">
           {/* Logo */}
-          <Link className="navbar-brand fw-bold" to="/">
+          <Link className="navbar-brand fw-bold" to="/" onClick={closeMobileMenu}>
             <img src="/image/logo/Dbs.png" alt="Logo" className="logo" />
           </Link>
 
@@ -59,12 +70,13 @@ const Header = () => {
                     "nav-link" + (isActive ? " active" : "")
                   }
                   end
+                  onClick={closeMobileMenu}
                 >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item DreamHeader">
-                <Link className="nav-link" to="/#aboutus">
+                <Link className="nav-link" to="/#aboutus" onClick={closeMobileMenu}>
                   About Us
                 </Link>
               </li>
@@ -74,21 +86,23 @@ const Header = () => {
                   className={({ isActive }) =>
                     "nav-link" + (isActive ? " active" : "")
                   }
+                  onClick={closeMobileMenu}
                 >
                   Services
                 </NavLink>
               </li>
               <li className="nav-item DreamHeader">
-              <a className="nav-link" href="/services-areas">
-                Services Area
-              </a>
-            </li>
+                <a className="nav-link" href="/services-areas" onClick={closeMobileMenu}>
+                  Services Area
+                </a>
+              </li>
               <li className="nav-item DreamHeader">
                 <NavLink
                   to="/portfolio"
                   className={({ isActive }) =>
                     "nav-link" + (isActive ? " active" : "")
                   }
+                  onClick={closeMobileMenu}
                 >
                   Portfolio
                 </NavLink>
@@ -99,6 +113,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     "nav-link" + (isActive ? " active" : "")
                   }
+                  onClick={closeMobileMenu}
                 >
                   Blog
                 </NavLink>
@@ -107,7 +122,7 @@ const Header = () => {
 
             {/* Right Button */}
             <div className="d-flex">
-              <Link to="/contact-us" className="btn DreamBtn">
+              <Link to="/contact-us" className="btn DreamBtn" onClick={closeMobileMenu}>
                 Contact Us
               </Link>
             </div>

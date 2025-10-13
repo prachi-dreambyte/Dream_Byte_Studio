@@ -1,99 +1,289 @@
 .media-container {
   display: flex;
-  gap: 20px;       /* space between image & video */
+  gap: 20px;
   margin-top: 20px;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
 }
+
 .media-item {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-height: 540px;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-height: 540px;
+  object-fit: cover;
+  margin-bottom: 90px;
 }
+
 .ServicePadding {
-    padding: 0px 150px 20px 150px;
+  padding: 0px 150px 20px 150px;
 }
-.ServiceSpan{
-    color:black;
+
+.ServiceSpan {
+  color: black;
 }
-.ServiceWrapper{
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 50px;
+
+.ServiceWrapper {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 50px;
 }
-.ServiceWrapper h6{
-font-size: 20px;
-    font-weight: 500;
-    color: #363636;
+
+.ServiceWrapper h6 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #363636;
 }
-.ServiceWrapper p{
-font-size: 18px;
-    font-weight: 450;
-    letter-spacing: 0px;
+
+.ServiceWrapper p {
+  font-size: 18px;
+  font-weight: 450;
+  letter-spacing: 0px;
 }
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
 .services-card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      max-width: 320px;
-      margin: auto;
-    }
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-width: 320px;
+  margin: auto;
+}
 
-    .services-card h5 {
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+.services-card h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-    .service-item {
-      display: flex;
-      align-items: center;
-      padding: 12px 15px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      font-size: 15px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-    .service-item i {
-      margin-right: 10px;
-      font-size: 16px;
-    }
+.service-item i {
+  margin-right: 10px;
+  font-size: 16px;
+}
 
-    /* Active Item */
-    .service-item.active {
-      background: #363636;
-      color: #fff;
-      font-weight: 600;
-    }
+/* Active Item */
+.service-item.active {
+  background: #363636;
+  color: #fff;
+  font-weight: 600;
+}
 
-    .service-item.active i {
-      color: #fff;
-    }
+.service-item.active i {
+  color: #fff;
+}
 
-    /* Inactive */
-    .service-item.inactive {
-      color: #aaa;
-      border-bottom: 1px solid #eee;
-    }
+/* Inactive */
+.service-item.inactive {
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+}
 
-    .service-item.inactive i {
-      color: #ccc;
-    }
+.service-item.inactive i {
+  color: #ccc;
+}
 
-    /* Hover effect */
-    .service-item.inactive:hover {
-      background: #f8f9fa;
-      cursor: pointer;
-    }
+/* Hover effect */
+.service-item.inactive:hover {
+  background: #f8f9fa;
+  cursor: pointer;
+}
 
-    /* Responsive */
-    @media (max-width: 576px) {
-      .services-card {
-        padding: 15px;
-        max-width: 100%;
-      }
-    }
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Extra Large Screens (1921px and above) */
+@media (min-width: 1921px) {
+  .ServicePadding {
+    padding: 0px 200px 20px 200px;
+  }
+  
+  .services-card {
+    max-width: 380px;
+  }
+  
+  .media-item {
+    max-height: 640px;
+  }
+}
+
+/* Large Screens (1200px to 1920px) */
+@media (max-width: 1920px) {
+  .ServicePadding {
+    padding: 0px 150px 20px 150px;
+  }
+}
+
+/* Medium-Large Screens (992px to 1199px) */
+@media (max-width: 1199px) {
+  .ServicePadding {
+    padding: 0px 80px 20px 80px;
+  }
+  
+  .services-card {
+    max-width: 280px;
+  }
+  
+  .ServiceWrapper h6 {
+    font-size: 18px;
+  }
+  
+  .ServiceWrapper p {
+    font-size: 16px;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .ServicePadding {
+    padding: 0px 40px 20px 40px;
+  }
+  
+  .sticky-sidebar {
+    position: relative;
+    top: 0;
+    margin-top: 40px;
+  }
+  
+  .services-card {
+    max-width: 100%;
+  }
+  
+  .ServiceWrapper {
+    padding: 20px 25px;
+    border-radius: 30px;
+  }
+  
+  .media-item {
+    max-height: 450px;
+  }
+}
+
+/* Small Tablets (577px to 767px) */
+@media (max-width: 767px) {
+  .ServicePadding {
+    padding: 0px 30px 20px 30px;
+  }
+  
+  .ServiceWrapper h6 {
+    font-size: 17px;
+  }
+  
+  .ServiceWrapper p {
+    font-size: 15px;
+  }
+  
+  .service-item {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .media-item {
+    max-height: 380px;
+  }
+}
+
+/* Mobile (361px to 576px) */
+@media (max-width: 576px) {
+  .ServicePadding {
+    padding: 0px 20px 20px 20px;
+  }
+  
+  .services-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .ServiceWrapper {
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  
+  .ServiceWrapper h6 {
+    font-size: 16px;
+  }
+  
+  .ServiceWrapper p {
+    font-size: 14px;
+  }
+  
+  .service-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  
+  .media-item {
+    max-height: 300px;
+    border-radius: 8px;
+  }
+  
+  .media-container {
+    gap: 15px;
+  }
+}
+
+/* Extra Small Mobile (360.98px and below) */
+@media (max-width: 360.98px) {
+  .ServicePadding {
+    padding: 0px 15px 15px 15px;
+  }
+  
+  .services-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .services-card h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .ServiceWrapper {
+    padding: 12px 15px;
+    border-radius: 15px;
+  }
+  
+  .ServiceWrapper h6 {
+    font-size: 15px;
+  }
+  
+  .ServiceWrapper p {
+    font-size: 13px;
+  }
+  
+  .service-item {
+    font-size: 12px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+  }
+  
+  .service-item i {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  
+  .media-item {
+    max-height: 250px;
+    border-radius: 6px;
+  }
+  
+  .media-container {
+    gap: 12px;
+    margin-top: 15px;
+  }
+}
